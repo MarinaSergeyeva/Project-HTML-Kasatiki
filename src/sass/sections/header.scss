@@ -1,10 +1,8 @@
 .hero-header {
-  //   background-image: url(../../images/header-bg.svg);
-  background-image: url(https://i.picsum.photos/id/738/200/300.jpg);
-  width: 100%;
-  background-size: cover;
-  background-position: center;
+  background-image: url(../../images/header/header-bg.svg);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   padding-top: 114px;
   padding-bottom: 36px;
 
@@ -56,13 +54,13 @@
 
 .navigation {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 20px;
+  left: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 60px;
-  background-color: pink;
+  // padding-top: 60px;
+  // background-color: pink;
 
   //   @media (min-width: 768px) {
   //     display: flex;
