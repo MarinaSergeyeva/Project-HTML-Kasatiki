@@ -1,0 +1,20 @@
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-icon-footer {
+  width: 110px;
+}
+
+.contacts {
+  margin: 0 auto;
+  font-family: $main-font;
+  @include font(14px, 400, 24px, $main-font-color);
+
+  &__link {
+    display: block;
+    text-align: center;
+    color: $main-font-color;
+  }
+}
