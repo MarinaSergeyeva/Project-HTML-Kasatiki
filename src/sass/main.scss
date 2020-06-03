@@ -1,0 +1,26 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import './normalize.scss';
+@import './helpers/fonts.scss';
+@import './helpers/variables.scss';
+@import './helpers/mixins.scss';
+@import './helpers/placeholders.scss';
+@import './base.scss';
+
+@import './sections/header.scss';
+@import './sections/promo.scss';
+@import './sections/speciallists.scss';
+@import './sections/prepare.scss';
+@import './sections/test.scss';
+@import './sections/course.scss';
+@import './sections/study.scss';
+@import './sections/teachers.scss';
+@import './sections/certificate.scss';
+@import './sections/review.scss';
+@import './sections/footer.scss';
+
+// @import './components/section.scss';
+// @import './components/section-title.scss';
+// @import './components/section-description.scss';

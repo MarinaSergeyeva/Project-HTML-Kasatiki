@@ -1,0 +1,10 @@
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+%btn-base {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
