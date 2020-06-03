@@ -9,6 +9,8 @@
 @import './helpers/placeholders.scss';
 @import './base.scss';
 
+@import './components/section.scss';
+
 @import './sections/header.scss';
 @import './sections/promo.scss';
 @import './sections/speciallists.scss';
@@ -21,6 +23,5 @@
 @import './sections/review.scss';
 @import './sections/footer.scss';
 
-// @import './components/section.scss';
 // @import './components/section-title.scss';
 // @import './components/section-description.scss';
