@@ -1,0 +1,24 @@
+.section {
+  padding: 50px 0;
+
+  &__title {
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.06;
+    color: $main-font-color;
+    text-transform: uppercase;
+    text-align: center;
+
+    &::before {
+      content: "\005B  ";
+      color: $main-decoration-color;
+    }
+
+    &::after {
+      content: "  \005D";
+      color: $main-decoration-color;
+    }
+  }
+}
