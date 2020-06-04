@@ -1,17 +1,30 @@
 .footer {
   background-image: url(../../images/footer/footer-bg.jpg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: bottom;
+
+  @media (min-width: 768px) {
+    background-image: url(../../images/footer/footer-bg-md.jpg);
+  }
+
+  @media (min-width: 1440px) {
+    background-image: url(../../images/footer/footer-bg-lg.jpg);
+  }
 }
 
-// .logo-icon-footer {
-//   width: 110px;
-//   margin-bottom: 26px;
-// }
-
-.logo_pic {
+.logo {
   display: block;
+  margin-bottom: 26px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: start;
+  }
+
+  &_img {
+    margin: 0 auto;
+  }
 }
 
 .contacts {
@@ -20,10 +33,19 @@
   @include font(14px, 400, 24px, $main-font-color);
   margin-bottom: 28px;
 
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: start;
+  }
+
   &__link {
     display: block;
     text-align: center;
     color: $main-font-color;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
 
     &-adress {
       margin-bottom: 30px;
