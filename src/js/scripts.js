@@ -2,7 +2,7 @@ $('.teachers-list').slick({
     arrows: true,
     slidesToShow: 3,
     centerPadding: '20px',
-    infinite: false,
+    infinite: true,
     nextArrow: '<button type="button" class="slick-next">&#8594;</button>',
     prevArrow: '<button type="button" class="slick-prev">&#8592;</button>',
     responsive: [
@@ -13,7 +13,7 @@ $('.teachers-list').slick({
           arrows: true,
           centerMode: true,
           centerPadding: '25%',
-          infinite: false,
+          infinite: true,
           slidesToShow: 1
          
         }
@@ -22,7 +22,7 @@ $('.teachers-list').slick({
         breakpoint: 500,
         settings: {
           arrows: true,
-          infinite: false,
+          infinite: true,
           centerPadding: '40px',
           slidesToShow: 1
         }
