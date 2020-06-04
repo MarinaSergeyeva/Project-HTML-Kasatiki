@@ -1,6 +1,6 @@
 .footer {
   background-image: url(../../images/footer/footer-bg.jpg);
-  background-size: 100% 644px;
+  background-size: 100% 686px;
   background-repeat: no-repeat;
   background-position: bottom;
 
@@ -25,7 +25,11 @@
   }
 
   &_img {
-    // margin: 0 auto;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      margin: 0;
+    }
   }
 }
 
@@ -33,9 +37,12 @@
   margin: 0 auto;
   font-family: $main-font;
   @include font(14px, 400, 24px, $main-font-color);
+  letter-spacing: 0.56px;
   margin-bottom: 28px;
 
   @media (min-width: 768px) {
+    @include font(16px, 400, 25px, $main-font-color);
+    letter-spacing: 0.64px;
     display: flex;
     justify-content: start;
     margin-bottom: 44px;
@@ -54,7 +61,7 @@
     &-adress {
       margin-bottom: 30px;
 
-      @media (min-width:768px) {
+      @media (min-width: 768px) {
         margin-bottom: 0;
       }
 
@@ -65,13 +72,13 @@
   }
 }
 
-
 .media {
-  display: flex;
-  align-items: center;
-  justify-content: start;
+  // display: flex;
 
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: start;
     margin-bottom: 48px;
   }
 
@@ -83,14 +90,21 @@
     margin-bottom: 36px;
 
     @media (min-width: 768px) {
+      display: flex;
       margin: 0;
       margin-right: 40px;
     }
 
     &-footer {
       @include btn($btn-color, #ffffff, 22px 76px, 270px);
+      @include font(13px, 700, 1.2, #fffff);
       background: $main-gradient;
       box-shadow: 5.5px 9.526px 16px 0px rgba(90, 118, 233, 0.23);
+
+      @media (min-width: 768px) {
+        @include btn($btn-color, #ffffff, 15px 48px, 240px);
+        @include font(16px, 700, 26px, #fffff);
+      }
     }
   }
 
@@ -99,7 +113,7 @@
     justify-content: center;
     margin-bottom: 40px;
 
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
       margin: 0;
     }
 
