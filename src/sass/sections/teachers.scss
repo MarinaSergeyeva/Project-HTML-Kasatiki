@@ -1,5 +1,5 @@
 .teachers {
-  padding: 56px 24px;
+  padding: 56px 0;
 
   &-list {
     position: relative;
@@ -15,9 +15,7 @@
 
   &__name {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    transform: translate(20%, 50%);
+    // right: 25%;
     background-color: #4f7df0;
     @include font (16px, 700, 1.2, #ffffff);
     font-family: $main-font, sans-serif;
@@ -28,6 +26,7 @@
 
   &__img {
     margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -37,7 +36,6 @@
 
 .img-wrapper {
   position: relative;
-//   margin-bottom: 46px;
   margin: 0 auto 46px;
 }
 
@@ -62,10 +60,21 @@
 
 
 @media (min-width: 500px) {
-    .teachers-list__item {
-        margin: 0 60px;
-        &__item {
-            width: 382px;
-        }
+  .teachers-list__item {
+    margin: 0 30px 20px;
+
+    &__item {
+      width: 382px;
+    }
+  }
 }
+
+@media (min-width: 1200px) {
+  .teachers-list__item {
+    margin: 0 20px;
+
+    &__item {
+      width: 382px;
+    }
+  }
 }

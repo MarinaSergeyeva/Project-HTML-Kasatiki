@@ -1,30 +1,20 @@
 $('.teachers-list').slick({
     arrows: true,
     slidesToShow: 3,
-    centerPadding: '60px',
+    centerPadding: '20px',
     infinite: false,
     nextArrow: '<button type="button" class="slick-next">&#8594;</button>',
     prevArrow: '<button type="button" class="slick-prev">&#8592;</button>',
     responsive: [
       {
-        breakpoint: 1440,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '40px',
-          infinite: false,
-          slidesToShow: 1
-         
-        }
-      },
-      {
         breakpoint: 768,
         settings: {
+        variablesWidth: false,
           arrows: true,
           centerMode: true,
-          centerPadding: '40px',
+          centerPadding: '25%',
           infinite: false,
-          slidesToShow: 3
+          slidesToShow: 1
          
         }
       },
@@ -38,4 +28,8 @@ $('.teachers-list').slick({
         }
       }
     ]
+  })
+
+  .on('setPosition', function (event, slick) {
+    slick.$slides.css('height', slick.$slideTrack.height() + 'px');
   });
