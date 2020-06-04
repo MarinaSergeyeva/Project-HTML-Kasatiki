@@ -92,11 +92,19 @@
       letter-spacing: 1.8px;
     }
 
+    &:hover {
+      color: $btn-color;
+    }
+
     &::after {
       display: block;
       content: '';
       @include size(100%, 2px);
       background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:hover::after {
+      background-color: rgba(254, 194, 64, 0.3);
     }
   }
 
@@ -168,14 +176,22 @@
         letter-spacing: 1.15px;
       }
 
+      &:hover {
+        color: $btn-color;
+      }
+
       &::after {
         @media (min-width: 768px) {
           display: block;
           content: '';
           @include size(100%, 2px);
-          background-color: $main-decoration-color;
-          opacity: 0.3;
+          background-color: transparent;
         }
+      }
+
+      &:hover:after,
+      &:focus:after {
+        background-color: rgba(254, 194, 64, 0.3);
       }
     }
   }
