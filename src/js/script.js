@@ -1,11 +1,13 @@
 $('.review-slider').slick({
   arrows: true,
-  centerPadding: '60px',
+  centerPadding: '20px',
   infinite: true,
   slidesToShow: 3,
-  centerMode: true,
+  nextArrow: '<button type="button" class="slick-next">&#8594;</button>',
+  prevArrow: '<button type="button" class="slick-prev">&#8592;</button>',
+
   responsive: [{
-      breakpoint: 768,
+      breakpoint: 1439,
       settings: {
         variableWidth: false,
         arrows: true,
@@ -16,10 +18,10 @@ $('.review-slider').slick({
       }
     },
     {
-      breakpoint: 500,
+      breakpoint: 600,
       settings: {
         arrows: true,
-        infinite: false,
+        infinite: true,
         centerPadding: '40px',
         slidesToShow: 1,
 
