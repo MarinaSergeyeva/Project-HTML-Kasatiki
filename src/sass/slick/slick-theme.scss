@@ -10,7 +10,7 @@
 $slick-font-path: "../../fonts/slick/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "../../images/" !default;
-$slick-arrow-color: #4f7df0 !default;
+$slick-arrow-color: #ffff !default;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
 $slick-prev-character: "\2190" !default;
@@ -64,72 +64,73 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-next {
     position: absolute;
     display: block;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     line-height: 0px;
-    font-size: 0px;
+    font-size: 20px;
     cursor: pointer;
     background:  rgb(255, 255, 255);
-    color: transparent;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+    color: #4f7df0;
+    top: 25%;
     padding: 0;
-    // border: none;
     outline: none;
     z-index: 1;
-    box-shadow: 1.5px 2.598px 9px 0px rgba(1, 1, 0, 0.1);
+    box-shadow: 1.5px 2.598px 9px 0px rgba(2, 2, 1, 0.1);
     border-radius: 50%;
+    border: none;
+      
    
-    &:hover, &:focus {
-        outline: none;
-        background: transparent;
-        color: transparent;
-        &:before {
-            opacity: $slick-opacity-on-hover;
-        }
+    // &:hover, &:focus {
+    //     outline: none;
+    //     background: transparent;
+    //     color: transparent;
+    //     &:before {
+    //         opacity: $slick-opacity-on-hover;
+    //     }
+    // }
+    &.slick-disabled {
+        color: #eaeaea;
     }
-    &.slick-disabled:before {
-        opacity: $slick-opacity-not-active;
-    }
-    &:before {
-        font-family: $slick-font-family;
-        font-size: 20px;
-        line-height: 1;
-        color: $slick-arrow-color;
-        opacity: $slick-opacity-default;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+    // &:before {
+    //     font-family: $slick-font-family;
+    //     font-size: 20px;
+    //     line-height: 1;
+    //     color: $slick-arrow-color;
+    //     opacity: $slick-opacity-default;
+    //     -webkit-font-smoothing: antialiased;
+    //     -moz-osx-font-smoothing: grayscale;
+    // }
 }
 
 .slick-prev {
     left: 0px;
+transform: translate(-50%, 0);
+
     [dir="rtl"] & {
         left: auto;
         right: 0px;
     }
-    &:before {
-        content: $slick-prev-character;
-        [dir="rtl"] & {
-            content: $slick-next-character;
-        }
-    }
+    // &:before {
+    //     content: $slick-prev-character;
+    //     [dir="rtl"] & {
+    //         content: $slick-next-character;
+    //     }
+    // }
 }
 
 .slick-next {
     right: 0px;
+    transform: translate(50%, 0);
     [dir="rtl"] & {
         left: 0px;
         right: auto;
     }
-    &:before {
-        content: $slick-next-character;
-        [dir="rtl"] & {
-            content: $slick-prev-character;
-        }
-    }
+    // &:before {
+    //     content: $slick-next-character;
+    //     [dir="rtl"] & {
+    //         content: $slick-prev-character;
+    //     }
+    // }
 }
 
 /* Dots */

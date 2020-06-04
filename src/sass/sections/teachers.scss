@@ -1,19 +1,71 @@
-.teachers-list {
+.teachers {
+  padding: 56px 24px;
+
+  &-list {
     position: relative;
+    @extend %flex-between;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 270px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
+    }
+  }
+
+  &__name {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(20%, 50%);
+    background-color: #4f7df0;
+    @include font (16px, 700, 1.2, #ffffff);
+    font-family: $main-font, sans-serif;
+    padding: 8px 10px 6px 10px;
+    box-shadow: 7.5px 12.99px 24px 0px rgba(90, 118, 233, 0.12);
+    text-transform: uppercase;
+  }
+
+  &__img {
+    margin: 0 auto;
+  }
+}
+
+.section__title--indent {
+  margin-bottom: 34px;
 }
 
 .img-wrapper {
-    position: relative;
+  position: relative;
+//   margin-bottom: 46px;
+  margin: 0 auto 46px;
 }
 
-.teachers-name {
-    position: absolute;
-}
-.teachers-list__item {
-width: 380px;
-margin: 0 10px;
+.about-wrapper {
+  text-align: left;
+  padding: 0 20px;
 }
 
-.teachers-img{
-margin: 0 auto;
+.experiance {
+  margin: 0 auto;
+  font-family: $main-font, sans-serif;
+  @include font (14px, 300, 30px, #6b6f7a);
+  margin-bottom: 16px;
+}
+
+.mission {
+  margin: 0 auto;
+  font-family: $main-font, sans-serif;
+  @include font (14px, 700, 30px, #2c2c2c);
+  padding-right: 18px;
+}
+
+
+@media (min-width: 500px) {
+    .teachers-list__item {
+        margin: 0 60px;
+        &__item {
+            width: 382px;
+        }
+}
 }
