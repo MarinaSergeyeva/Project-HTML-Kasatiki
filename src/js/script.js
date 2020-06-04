@@ -1,23 +1,28 @@
 $('.review-slider').slick({
-  centerMode: true,
+  arrows: true,
   centerPadding: '60px',
-  slidesToShow: 1,
+  infinite: true,
+  slidesToShow: 3,
+  centerMode: true,
   responsive: [{
-      breakpoint: 1450,
+      breakpoint: 768,
       settings: {
-        arrows: false,
+        variableWidth: false,
+        arrows: true,
         centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
+        centerPadding: '25%',
+        infinite: true,
+        slidesToShow: 1,
       }
     },
     {
-      breakpoint: 768,
+      breakpoint: 500,
       settings: {
-        arrows: false,
-        centerMode: true,
+        arrows: true,
+        infinite: false,
         centerPadding: '40px',
-        slidesToShow: 1
+        slidesToShow: 1,
+
       }
     }
   ]
