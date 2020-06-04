@@ -1,15 +1,24 @@
 .hero-header {
   background-image: url(../../images/header/header-bg.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: -15px;
+  background-size: 100% 430px;
+  background-position: top;
   padding-top: 114px;
-  padding-bottom: 36px;
+
+  @media (min-width: 768px) {
+    background-image: url(../../images/header/header-bg-md.png);
+    background-size: 100% 650px;
+  }
 
   &__title {
     @include font(16px, 400, 22px, #ffffff);
     letter-spacing: 0.48px;
     margin-bottom: 36px;
+
+    @media (min-width: 768px) {
+      background-image: url(../../images/header/header-bg-md.png);
+      background-size: 100% 650px;
+    }
 
     &-br {
       display: block;
@@ -45,6 +54,10 @@
       background-color: rgba(255, 255, 255, 0.3);
     }
   }
+
+  &__pic {
+    margin: 0 auto;
+  }
 }
 
 .logo-icon {
@@ -59,13 +72,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // padding-top: 60px;
   // background-color: pink;
 
-  //   @media (min-width: 768px) {
-  //     display: flex;
-  //     justify-content: space-between;
-  //   }
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 710px;
+    transform: translateX(-50%);
+  }
 
   &__list {
     display: flex;
@@ -84,6 +102,7 @@
 
     &-link {
       @include font(15px, 500, 1.2, #ffffff);
+      letter-spacing: 0.75px;
     }
   }
 }
