@@ -1,1 +1,89 @@
+.hero-header {
+  background-image: url(../../images/header/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: -15px;
+  padding-top: 114px;
+  padding-bottom: 36px;
 
+  &__title {
+    @include font(16px, 400, 22px, #ffffff);
+    letter-spacing: 0.48px;
+    margin-bottom: 36px;
+
+    &-br {
+      display: block;
+    }
+
+    &-wrapper {
+      font-family: $main-font;
+      text-align: center;
+      width: 260px;
+      justify-content: center;
+      margin: 0 auto;
+      margin-bottom: 26px;
+    }
+
+    &-description {
+      @include font(20px, 700, 26px, #ffffff);
+      letter-spacing: 0.8px;
+      margin-bottom: 38px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 0 auto;
+    font-family: $main-font;
+    @include font(15px, 700, 1.2, #ffffff);
+    letter-spacing: 0.9px;
+
+    &::after {
+      display: block;
+      content: '';
+      @include size(100%, 2px);
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+.logo-icon {
+  display: inline-block;
+  @include size(83px, 22px);
+}
+
+.navigation {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding-top: 60px;
+  // background-color: pink;
+
+  //   @media (min-width: 768px) {
+  //     display: flex;
+  //     justify-content: space-between;
+  //   }
+
+  &__list {
+    display: flex;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      @media (min-width: 768px) {
+        margin-right: 70px;
+      }
+    }
+
+    &-link {
+      @include font(15px, 500, 1.2, #ffffff);
+    }
+  }
+}
