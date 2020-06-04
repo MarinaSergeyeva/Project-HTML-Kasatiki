@@ -103,8 +103,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-    left: 0px;
-transform: translate(-50%, 0);
+    left: 5px;
 
     [dir="rtl"] & {
         left: auto;
@@ -119,8 +118,7 @@ transform: translate(-50%, 0);
 }
 
 .slick-next {
-    right: 0px;
-    transform: translate(50%, 0);
+    right: 5px;
     [dir="rtl"] & {
         left: 0px;
         right: auto;

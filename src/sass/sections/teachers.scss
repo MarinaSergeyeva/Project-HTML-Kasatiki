@@ -1,5 +1,5 @@
 .teachers {
-  padding: 56px 0;
+  padding: 56px 24px;
 
   &-list {
     position: relative;
@@ -58,8 +58,11 @@
   padding-right: 18px;
 }
 
+.slick-slide img {
+  width: 100%;
+}
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .teachers-list__item {
     margin: 0 30px 20px;
 
@@ -67,7 +70,16 @@
       width: 382px;
     }
   }
+
+  .slick-next {
+    left: 25%;
+  }
+
+  .slick-prev {
+    left: 25%;
+  }
 }
+
 
 @media (min-width: 1200px) {
   .teachers-list__item {
@@ -76,5 +88,13 @@
     &__item {
       width: 382px;
     }
+  }
+
+  .slick-next {
+    transform: translate(-50%, 0);
+  }
+
+  .slick-prev {
+    transform: translate(-50%, 0);
   }
 }
