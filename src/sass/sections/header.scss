@@ -6,8 +6,15 @@
   padding-top: 114px;
 
   @media (min-width: 768px) {
-    background-image: url(../../images/header/header-bg-md.png);
+    background-image: url(../../images/header/header-bg-md.jpg);
     background-size: 100% 650px;
+    padding-top: 190px;
+  }
+
+  @media (min-width: 1440px) {
+    background-image: url(../../images/header/header-bg-lg.jpg);
+    background-size: 100% 1024px;
+    padding-top: 252px;
   }
 
   &__title {
@@ -16,12 +23,23 @@
     margin-bottom: 36px;
 
     @media (min-width: 768px) {
-      background-image: url(../../images/header/header-bg-md.png);
-      background-size: 100% 650px;
+      @include font(20px, 400, 1.2, #ffffff);
+      letter-spacing: 0.6px;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: 1440px) {
+      @include font(36px, 400, 1.2, #ffffff);
+      letter-spacing: 1.08px;
+      margin-bottom: 80px;
     }
 
     &-br {
       display: block;
+
+      @media (min-width: 768px) {
+        display: inline-block;
+      }
     }
 
     &-wrapper {
@@ -31,12 +49,34 @@
       justify-content: center;
       margin: 0 auto;
       margin-bottom: 26px;
+
+      @media (min-width: 768px) {
+        width: 450px;
+        margin-bottom: 40px;
+      }
+
+      @media (min-width: 1440px) {
+        width: 1216px;
+        margin-bottom: 10px;
+      }
     }
 
     &-description {
       @include font(20px, 700, 26px, #ffffff);
       letter-spacing: 0.8px;
       margin-bottom: 38px;
+
+      @media (min-width: 768px) {
+        @include font(35px, 700, 1.2, #ffffff);
+        letter-spacing: 1.15px;
+        margin-bottom: 50px;
+      }
+
+      @media (min-width: 1440px) {
+        @include font(60px, 700, 1.2, #ffffff);
+        letter-spacing: 1px;
+        margin-bottom: 80px;
+      }
     }
   }
 
@@ -46,6 +86,11 @@
     font-family: $main-font;
     @include font(15px, 700, 1.2, #ffffff);
     letter-spacing: 0.9px;
+
+    @media (min-width: 1440px) {
+      @include font(30px, 700, 1.2, #ffffff);
+      letter-spacing: 1.8px;
+    }
 
     &::after {
       display: block;
@@ -60,9 +105,8 @@
   }
 }
 
-.logo-icon {
-  display: inline-block;
-  @include size(83px, 22px);
+.logo__pic {
+  display: block;
 }
 
 .navigation {
@@ -85,6 +129,17 @@
     transform: translateX(-50%);
   }
 
+  @media (min-width: 1440px) {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1420px;
+    transform: translateX(-50%);
+  }
+
   &__list {
     display: flex;
 
@@ -98,11 +153,30 @@
       @media (min-width: 768px) {
         margin-right: 70px;
       }
+
+      @media (min-width: 1440px) {
+        margin-right: 98px;
+      }
     }
 
     &-link {
       @include font(15px, 500, 1.2, #ffffff);
       letter-spacing: 0.75px;
+
+      @media (min-width: 1440px) {
+        @include font(23px, 500, 1.2, #ffffff);
+        letter-spacing: 1.15px;
+      }
+
+      &::after {
+        @media (min-width: 768px) {
+          display: block;
+          content: '';
+          @include size(100%, 2px);
+          background-color: $main-decoration-color;
+          opacity: 0.3;
+        }
+      }
     }
   }
 }
