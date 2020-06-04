@@ -5,5 +5,10 @@ $main-decoration-color: rgb(238, 191, 62);
 $secondary-decoration-color: rgb(202, 0, 120);
 $third-decoration-color: rgb(95, 124, 236);
 $main-font-color: rgb(44, 44, 44);
-$secondary-font-color: rgb(107, 111, 122);
+$secondary-font-color: #6b6f7a;
 $btn-color: rgb(254, 194, 64);
+$main-gradient: linear-gradient(
+  -90deg,
+  rgb(193, 73, 231) 0%,
+  rgb(133, 166, 246) 100%
+);

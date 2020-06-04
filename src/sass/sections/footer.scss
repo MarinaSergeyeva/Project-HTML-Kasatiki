@@ -1,0 +1,90 @@
+.footer {
+  background-image: url(../../images/footer/footer-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-icon-footer {
+  width: 110px;
+  margin-bottom: 26px;
+}
+
+.contacts {
+  margin: 0 auto;
+  font-family: $main-font;
+  @include font(14px, 400, 24px, $main-font-color);
+  margin-bottom: 28px;
+
+  &__link {
+    display: block;
+    text-align: center;
+    color: $main-font-color;
+
+    &-adress {
+      margin-bottom: 30px;
+
+      &-br {
+        display: block;
+      }
+    }
+  }
+}
+
+.btn {
+  @extend %btn-base;
+  border-radius: 32px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 36px;
+
+  &-footer {
+    @include btn($btn-color, #ffffff, 22px 76px, 270px);
+    background: $main-gradient;
+    box-shadow: 5.5px 9.526px 16px 0px rgba(90, 118, 233, 0.23);
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__icon-telegram,
+  &__icon-facebook,
+  &__icon-youtube {
+    @include size(42px, 42px);
+  }
+}
+
+.copyright {
+  text-align: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    font-family: $main-font;
+    @include font(13px, 400, 25px, $secondary-font-color);
+    opacity: 0.55;
+    letter-spacing: 0.52px;
+  }
+}
