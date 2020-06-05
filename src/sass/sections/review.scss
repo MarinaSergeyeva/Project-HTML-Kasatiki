@@ -2,7 +2,7 @@
   padding: 25px 0;
 
   &.container {
-    @media (min-width: 600px) and (max-width: 1439px) {
+    @media (min-width: 768px) and (max-width: 1439px) {
       width: 100%;
     }
   }
@@ -11,24 +11,28 @@
 
 .review__item {
   width: 270px;
-  box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
+  box-shadow: 0px 10px 5px 0px rgba(2, 2, 1, 0.07);
   text-align: center;
   font-family: $main-font;
-  padding: 0 36px;
-  margin-bottom: 40px;
-  margin-right: 10px;
-  margin-left: 10px;
+  padding: 20px 28px 36px;
+  // margin-bottom: 40px;
+  // margin-right: 10px;
+  // margin-left: 10px;
+  margin: 0 auto;
 
-  @media (min-width:600px) {
+  @media (min-width:768px) {
     // padding-bottom: 55px;
-    margin-right: 30px;
-    margin-left: 30px;
-    width: 380px;
+    // margin-right: 30px;
+    // margin-left: 30px;
+    // width: 380px;
+    width: 100%;
+    padding: 55px 30px;
   }
 
   @media (min-width:1440px) {
-    margin-left: 20px;
-    margin-right: 20px;
+    // margin-left: 20px;
+    // margin-right: 20px;
+    padding: 60px 60px 55px;
   }
 }
 
@@ -49,7 +53,7 @@
 .review-list-about {
   @include font(14px, 500, 24px, $secondary-font-color);
   letter-spacing: 0.42px;
-  padding-bottom: 52px;
+  // padding-bottom: 52px;
 }
 
 .review-list-about__link {
@@ -74,15 +78,17 @@
 //   background-position: center;
 // }
 
-.slick-next:hover .slick-next:focus {
-
-  color: #eebbee;
-  background: blue;
+.slick-next:hover,
+.slick-next:focus {
+  // border: 0.4px solid rgba(238, 191, 62, 0.9);
+  color: $main-decoration-color;
+  box-shadow: 1.5px 2.598px 9px 0px rgba(238, 191, 62, 0.7);
 }
 
-.slick-prev:hover .slick-prev:focus {
-
-  color: #eebbee;
+.slick-prev:hover,
+.slick-prev:focus {
+  color: $main-decoration-color;
+  box-shadow: 1.5px 2.598px 9px 0px rgba(238, 191, 62, 0.7);
 }
 
 .slick-next {
@@ -93,13 +99,23 @@
   left: -10px;
 }
 
-@media(min-width:600px) and (max-width:1439px) {
+@media(min-width:768px) and (max-width:1439px) {
   .slick-next {
     right: 26%;
   }
 
   .slick-prev {
     left: 26%;
+  }
+}
+
+@media(min-width:1440px) {
+  .slick-next {
+    right: 1.5%;
+  }
+
+  .slick-prev {
+    left: 1.5%;
   }
 }
 

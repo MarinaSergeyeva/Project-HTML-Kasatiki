@@ -18,7 +18,7 @@ $('.review-slider').slick({
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 767,
       settings: {
         arrows: true,
         infinite: true,
