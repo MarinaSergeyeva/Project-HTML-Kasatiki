@@ -1,6 +1,6 @@
 .footer {
   background-image: url(../../images/footer/footer-bg.jpg);
-  background-size: 100% 686px;
+  background-size: 100% 675px;
   background-repeat: no-repeat;
   background-position: bottom;
 
@@ -13,6 +13,10 @@
     background-image: url(../../images/footer/footer-bg-lg.jpg);
     background-size: 100% 494px;
   }
+
+  &__pic {
+    @include size(118px, 188px);
+  }
 }
 
 .logo {
@@ -22,6 +26,7 @@
   @media (min-width: 768px) {
     display: flex;
     justify-content: start;
+    margin-left: 52px;
   }
 
   &_img {
@@ -46,6 +51,7 @@
     display: flex;
     justify-content: start;
     margin-bottom: 44px;
+    margin-left: 52px;
   }
 
   &__link {
@@ -93,6 +99,7 @@
       display: flex;
       margin: 0;
       margin-right: 40px;
+      margin-left: 52px;
     }
 
     &-footer {
@@ -154,6 +161,7 @@
 
   @media (min-width: 768px) {
     display: flex;
+    margin-left: 52px;
   }
 
   &__item {
