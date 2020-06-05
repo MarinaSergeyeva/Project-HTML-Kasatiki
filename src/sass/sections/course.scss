@@ -1,0 +1,146 @@
+.course-list {
+    @extend %flex-between;
+    flex-direction: column;
+    margin: 25px 0 44px;
+
+    &__item {
+        &-title {
+            font-family: $main-font;
+            @include font (20px, 700, 25px, $main-font-color);
+            margin-bottom: 20px;
+            letter-spacing: 0.6px ;
+            }  
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        &_red {
+            color:$secondary-decoration-color;
+        }    
+
+        &_yellow {
+            color: $btn-color;
+        }
+
+        &_blue {
+            color: $third-decoration-color;
+        }
+    }
+
+    &__description {
+        font-family:$main-font;
+        @include font (14px, 400, 24px, $secondary-font-color);
+        text-align: left;
+
+        &_bold {
+            color: $main-font-color;
+            font-weight: 700;
+        }
+    } 
+
+    &__icon::before {
+        content: "";
+        display: block;
+        margin: 0 auto 35px;
+        height: 142px;
+        width: 140px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon__soft-skills::before {
+    background-image: url('../images/course/icon-soft-skills.svg');
+}
+
+.icon__hard-skills::before {
+    background-image: url('../images/course/icon-hard-skills.png');
+}
+
+.icon__real-project::before {
+    background-image: url('../images/course/icon-real-project.svg');
+}
+
+.btn {
+    @extend %btn-base;
+    @include btn ($btn-color, rgb(255, 255, 255), 24px 0 22px, 270px);
+    @include font (13px, 700, 1.2, rgb(255, 255, 255));
+    font-family: $main-font;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    box-shadow: 0px 13px 17.1px 0.9px rgba(238, 193, 77, 0.4);
+    border-radius: 35px;
+
+    &:hover,
+    &:focus {
+        background-color: rgb(255, 255, 255);
+        color: $btn-color;
+        border: 1px solid $btn-color;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .course-list {
+        margin: 37px 0 60px;
+        &__item {
+            &-title {
+                @include font (25px, 700, 25px, $main-font-color);
+                margin-bottom: 32px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }  
+        }
+
+        &__description {
+            @include font (16px, 400, 30px, $secondary-font-color);
+        } 
+
+        &__icon::before {
+            margin: 0 auto 44px;
+            height: 203px;
+            width: 197px;
+        }
+    }
+
+    .btn {
+        @include btn ($btn-color, rgb(255, 255, 255), 24px 0 22px, 400px);
+        @include font (19px, 700, 1.2, rgb(255, 255, 255));
+    }
+
+    .icon__hard-skills::before {
+        background-image: url('../images/course/icon-hard-skills-md.png');
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .course-list {
+        flex-direction: row;
+        margin: 66px 0 90px;
+        &__item {
+            &:not(:last-child) {
+                margin-right: 68px;
+            }
+            
+            &-title {
+                @include font (30px, 700, 30px, $main-font-color);
+                margin-bottom: 32px;
+                letter-spacing: 0.6px;
+            }  
+    
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+        }
+
+        &__icon::before {
+            margin: 0 auto 50px;
+        }
+    }
+}
