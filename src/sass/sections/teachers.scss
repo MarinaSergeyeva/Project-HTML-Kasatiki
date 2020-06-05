@@ -74,8 +74,8 @@
   padding-right: 18px;
 }
 
-.slick-prev,
-.slick-next {
+.slick-next__teachers,
+.slick-prev__teachers {
   position: absolute;
   display: block;
   height: 40px;
@@ -104,7 +104,7 @@
   color: #ebebeb;
 }
 
-.slick-slide img {
+.teachers-list__item img {
   width: 100%;
 }
 
