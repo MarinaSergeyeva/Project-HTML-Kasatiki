@@ -97,13 +97,13 @@
 
     &-footer {
       @include btn($btn-color, #ffffff, 22px 76px, 270px);
-      @include font(13px, 700, 1.2, #fffff);
+      @include font(13px, 700, 1.2, #ffffff);
       background: $main-gradient;
       box-shadow: 5.5px 9.526px 16px 0px rgba(90, 118, 233, 0.23);
 
       @media (min-width: 768px) {
         @include btn($btn-color, #ffffff, 15px 48px, 240px);
-        @include font(16px, 700, 26px, #fffff);
+        @include font(16px, 700, 26px, #ffffff);
       }
     }
   }
