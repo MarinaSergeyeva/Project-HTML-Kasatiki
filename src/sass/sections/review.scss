@@ -1,0 +1,154 @@
+.review-section {
+  padding: 25px 0;
+
+  &.container {
+    @media (min-width: 768px) and (max-width: 1439px) {
+      width: 100%;
+    }
+  }
+}
+
+
+.review__item {
+  width: 270px;
+  box-shadow: 0px 10px 5px 0px rgba(2, 2, 1, 0.07);
+  text-align: center;
+  font-family: $main-font;
+  padding: 20px 28px 36px;
+  margin: 0 auto;
+
+  @media (min-width:768px) {
+    width: 100%;
+    padding: 55px 30px;
+  }
+
+  @media (min-width:1440px) {
+    padding: 60px 60px 55px;
+  }
+
+  &-foto {
+    border: 7px solid rgb(234, 241, 249);
+    border-radius: 50%;
+    margin: 0 auto 22px;
+  }
+}
+
+.review-list {
+  &-title {
+    @include font(21px, 700, 30px, $main-font-color);
+    letter-spacing: 0.63px;
+    margin-bottom: 13px;
+  }
+
+  &-about {
+    @include font(14px, 500, 24px, $secondary-font-color);
+    letter-spacing: 0.42px;
+
+    &__link {
+      color: $main-decoration-color;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.review__foto-wrapper {
+  margin-bottom: 22px;
+
+  &::after {
+    content: '';
+    background-image: url('../images/rev-images/quotes.jpg');
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+  }
+
+}
+
+.slick-slide {
+  margin-bottom: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+
+  @media (min-width:768px) {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 100%;
+  }
+
+  @media (min-width:1440px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+
+
+
+
+.slick-prev,
+.slick-next {
+  background: rgb(255, 255, 255);
+  color: rgb(95, 124, 236);
+  box-shadow: 1.5px 2.598px 9px 0px rgba(2, 2, 1, 0.1);
+  top: 30%;
+  padding-bottom: 2px;
+  border: none;
+  outline: none;
+  z-index: 1;
+  text-align: center;
+
+  @media (min-width:768px) {
+    top: 35%;
+  }
+
+}
+
+
+
+
+
+
+.slick-next {
+  right: -10px;
+
+  &:hover,
+  &:focus {
+    color: $main-decoration-color;
+    box-shadow: 1.5px 2.598px 9px 0px rgba(238, 191, 62, 0.7);
+  }
+
+  @media(min-width:768px) and (max-width:1439px) {
+    right: 26%;
+  }
+
+  @media(min-width:1440px) {
+    right: 1.5%;
+  }
+
+}
+
+.slick-prev {
+  left: -10px;
+
+  &:hover,
+  &:focus {
+    color: $main-decoration-color;
+    box-shadow: 1.5px 2.598px 9px 0px rgba(238, 191, 62, 0.7);
+  }
+
+  @media(min-width:768px) and (max-width:1439px) {
+    left: 26%;
+  }
+
+  @media(min-width:1440px) {
+    left: 1.5%;
+  }
+
+}
