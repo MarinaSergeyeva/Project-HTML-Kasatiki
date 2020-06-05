@@ -86,7 +86,6 @@
 }
 
 
-
 .slick-slide img {
   width: 100%;
 }
@@ -99,13 +98,16 @@
   left: -10px;
 }
 
-@media (min-width: 600px) and (max-width: 1439px) {
+
+@media (min-width: 600px) and (max-width: 767px) {
   .slick-next {
-    right: 26%;
+    right: 25%;
+    top: 242px;
   }
 
   .slick-prev {
-    left: 26%;
+    left: 25%;
+    top: 242px;
   }
 }
 
@@ -117,15 +119,35 @@
       width: 382px;
     }
   }
+
+  .slick-next {
+    right: 27%;
+    top: 242px;
+  }
+
+  .slick-prev {
+    left: 27%;
+    top: 242px;
+  }
 }
 
 
-@media (min-width: 1440px) {
+@media (min-width: 1439px) {
   .teachers-list__item {
     margin: 0 20px;
 
     &__item {
       width: 382px;
     }
+  }
+
+  .slick-next {
+    right: 0px;
+    top: 310px;
+  }
+
+  .slick-prev {
+    left: 0px;
+    top: 310px;
   }
 }

@@ -28,11 +28,7 @@ $('.teachers-list').slick({
   ]
 })
 
-//  .on('setPosition', function (event, slick) {
-//    slick.$slideTrack.children().css('height', slick.$slideTrack.height() + 'px');
-// });
-
 
 // .on('setPosition', function (event, slick) {
-//  slick.$slides.css('height', slick.$slideTrack.height() + 'px');
-// });
+//   slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+//  });
