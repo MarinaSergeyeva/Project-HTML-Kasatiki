@@ -1,17 +1,10 @@
 .teachers {
   padding: 56px 0;
 
-  &.container {
-    @media (min-width: 600px) and (max-width: 1439px) {
-      width: 100%;
-    }
-  }
-
   &-list {
     position: relative;
     @extend %flex-between;
     flex-wrap: wrap;
-
 
     &__item {
       width: 270px;
@@ -43,6 +36,12 @@
 
   &__img {
     margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.container {
+  @media (min-width: 600px) and (max-width: 1439px) {
     width: 100%;
   }
 }
@@ -85,7 +84,6 @@
   color: #ebebeb;
 }
 
-
 .slick-slide img {
   width: 100%;
 }
@@ -98,8 +96,7 @@
   left: -10px;
 }
 
-
-@media (min-width: 600px) and (max-width: 767px) {
+@media (min-width: 600px) and (max-width: 1439px) {
   .slick-next {
     right: 25%;
     top: 242px;
@@ -113,41 +110,35 @@
 
 @media (min-width: 768px) {
   .teachers-list__item {
-    margin: 0 30px 20px;
-
-    &__item {
-      width: 382px;
-    }
+    margin: 0 30px 36px;
+    width: 382px;
   }
 
   .slick-next {
     right: 27%;
-    top: 242px;
+    top: 224px;
   }
 
   .slick-prev {
     left: 27%;
-    top: 242px;
+    top: 224px;
   }
 }
 
 
 @media (min-width: 1439px) {
   .teachers-list__item {
-    margin: 0 20px;
-
-    &__item {
-      width: 382px;
-    }
+    margin: 0 20px 86px;
+    width: 382px;
   }
 
   .slick-next {
-    right: 0px;
+    right: 6px;
     top: 310px;
   }
 
   .slick-prev {
-    left: 0px;
+    left: 6px;
     top: 310px;
   }
 }
