@@ -63,7 +63,7 @@
     background-image: url('../images/course/icon-real-project.svg');
 }
 
-.btn {
+.course-btn {
     @extend %btn-base;
     @include btn ($btn-color, rgb(255, 255, 255), 24px 0 22px, 270px);
     @include font (13px, 700, 1.2, rgb(255, 255, 255));
@@ -108,7 +108,7 @@
         }
     }
 
-    .btn {
+    .course-btn {
         @include btn ($btn-color, rgb(255, 255, 255), 24px 0 22px, 400px);
         @include font (19px, 700, 1.2, rgb(255, 255, 255));
     }
