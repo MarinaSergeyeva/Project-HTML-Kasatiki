@@ -9,7 +9,7 @@ $('.review-slider').slick({
   responsive: [{
       breakpoint: 1439,
       settings: {
-        variableWidth: false,
+        variablesWidth: false,
         arrows: true,
         centerMode: true,
         centerPadding: '25%',
