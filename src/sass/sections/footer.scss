@@ -102,7 +102,7 @@
       margin-left: 52px;
     }
 
-    &-footer {
+    &_footer {
       @include btn($btn-color, #ffffff, 22px 76px, 270px);
       @include font(13px, 700, 1.2, #ffffff);
       background: $main-gradient;
