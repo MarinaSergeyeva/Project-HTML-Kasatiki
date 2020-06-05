@@ -1,0 +1,71 @@
+.promo {
+
+  padding: 20px 0 0 0;
+
+  &__description {
+    @include font(20px, 700, 26px, $main-font-color);
+    font-family: $main-font;
+    letter-spacing: 0.03px;
+    text-align: center;
+
+    &_color {
+      color: $main-decoration-color;
+    }
+
+    &_br {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      @include font(35px, 700, 45px, $main-font-color);
+    }
+  }
+
+  &__container {
+    width: 320px;
+    padding-top: 14px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+
+    &_wrapper {
+      background-image: url(../../images/promo/3boys-sm/bg-section1-sm.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 35px 45px 80px 0;
+    }
+  }
+
+  &__item {
+    @include size(120px, 120px);
+
+    @media (min-width: 768px) {
+      @include size(227px, 227px);
+    }
+
+    &_size {
+      @include size(82px, 82px);
+      position: relative;
+      top: 60px;
+      left: 30px;
+
+      @media (min-width: 768px) {
+        @include size(148px, 148px);
+      }
+    }
+  }
+
+  &__image {
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(240, 240, 240, .65);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .65);
+    box-shadow: 7.5px 12.99px 25px 0px rgba(96, 96, 97, 0.21);
+  }
+}
