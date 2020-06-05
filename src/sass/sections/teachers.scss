@@ -1,0 +1,164 @@
+.teachers {
+  padding: 56px 0;
+
+  &-list {
+    position: relative;
+    @extend %flex-between;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 270px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 40px;
+
+      @media (min-width: 600px) {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__name {
+    position: absolute;
+    background-color: #4f7df0;
+    @include font (16px, 700, 1.2, #ffffff);
+    font-family: $main-font, sans-serif;
+    padding: 8px 10px 6px 10px;
+    box-shadow: 7.5px 12.99px 24px 0px rgba(90, 118, 233, 0.12);
+    text-transform: uppercase;
+    bottom: 0;
+    left: 30px;
+    transform: translateY(50%);
+  }
+
+  &__img {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.container {
+  @media (min-width: 600px) and (max-width: 1439px) {
+    width: 100%;
+  }
+}
+
+.section__title--indent {
+  margin-bottom: 34px;
+}
+
+.img-wrapper {
+  position: relative;
+  margin: 0 auto 46px;
+}
+
+.about-wrapper {
+  text-align: left;
+  padding: 0 20px 45px;
+}
+
+.experiance {
+  margin: 0 auto;
+  font-family: $main-font, sans-serif;
+  @include font (14px, 300, 30px, #6b6f7a);
+  margin-bottom: 16px;
+}
+
+.mission {
+  margin: 0 auto;
+  font-family: $main-font, sans-serif;
+  @include font (14px, 700, 30px, #2c2c2c);
+  padding-right: 18px;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 40px;
+  width: 40px;
+  line-height: 0px;
+  font-size: 16px;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  color: #4f7df0;
+  top: 22%;
+  padding: 0;
+  outline: none;
+  z-index: 1;
+  box-shadow: 1.5px 2.598px 9px 0px rgba(2, 2, 1, 0.1);
+  border-radius: 50%;
+  border: none;
+}
+
+.slick-next:hover,
+.slick-next:focus {
+  color: #ebebeb;
+}
+
+.slick-prev:hover,
+.slick-prev:focus {
+  color: #ebebeb;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-next {
+  right: -10px;
+}
+
+.slick-prev {
+  left: -10px;
+}
+
+@media (min-width: 600px) and (max-width: 1439px) {
+  .slick-next {
+    right: 25%;
+    top: 242px;
+  }
+
+  .slick-prev {
+    left: 25%;
+    top: 242px;
+  }
+}
+
+@media (min-width: 768px) {
+  .teachers-list__item {
+    margin: 0 30px 36px;
+    width: 382px;
+  }
+
+  .slick-next {
+    right: 27%;
+    top: 224px;
+  }
+
+  .slick-prev {
+    left: 27%;
+    top: 224px;
+  }
+}
+
+
+@media (min-width: 1439px) {
+  .teachers-list__item {
+    margin: 0 20px 86px;
+    width: 382px;
+  }
+
+  .slick-next {
+    right: 6px;
+    top: 310px;
+  }
+
+  .slick-prev {
+    left: 6px;
+    top: 310px;
+  }
+}

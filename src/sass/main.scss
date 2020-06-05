@@ -7,10 +7,10 @@
 @import './helpers/variables.scss';
 @import './helpers/mixins.scss';
 @import './helpers/placeholders.scss';
+@import './slick/slick.scss';
+@import './slick/slick-theme.scss';
 @import './base.scss';
-
 @import './components/section.scss';
-
 @import './sections/header.scss';
 @import './sections/promo.scss';
 @import './sections/specialists.scss';
@@ -22,6 +22,7 @@
 @import './sections/certificate.scss';
 @import './sections/review.scss';
 @import './sections/footer.scss';
+
 
 // @import './components/section-title.scss';
 // @import './components/section-description.scss';
