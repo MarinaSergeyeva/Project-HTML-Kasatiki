@@ -92,25 +92,26 @@
     @extend %btn-base;
     border-radius: 32px;
     display: block;
-    margin: 0 auto;
-    margin-bottom: 36px;
 
     @media (min-width: 768px) {
       display: flex;
       margin: 0;
-      margin-right: 40px;
-      margin-left: 52px;
     }
 
-    &_footer {
+    &_gradient {
       @include btn($btn-color, #ffffff, 22px 76px, 270px);
       @include font(13px, 700, 1.2, #ffffff);
       background: $main-gradient;
       box-shadow: 5.5px 9.526px 16px 0px rgba(90, 118, 233, 0.23);
+      margin: 0 auto;
+      margin-bottom: 36px;
+
 
       @media (min-width: 768px) {
         @include btn($btn-color, #ffffff, 15px 48px, 240px);
         @include font(16px, 700, 26px, #ffffff);
+        margin-right: 40px;
+        margin-left: 52px;
       }
     }
   }
