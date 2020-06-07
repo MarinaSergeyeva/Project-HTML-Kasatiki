@@ -1,63 +1,103 @@
 .section-certificate {
-  padding-top: 40px;
-  padding-bottom: 80px;
-  background-image: url('../images/certif-images/section-4-bg.svg');
+  padding: 40px 0 50px;
+  background-image: url('../images/certif-images/mobile-bg.jpg');
+  // background-image: url('../images/certif-images/section-4-bg.svg');
   background-repeat: no-repeat;
-  background-position: 60% 0%;
+  // background-position: 60% 0%;
+  background-position: right;
   background-size: cover;
 
   @media (min-width: 768px) {
-    // background-image: url('../images/certif-images/tablet-bg.jpg');
+    background-image: url('../images/certif-images/tablet-bg.jpg');
+    background-position: right;
+    padding: 84px 0 300px;
+
   }
 
   @media (min-width: 1440px) {
-    // background-image: url('../images/certif-images/desktop-bg.jpg');
+    background-image: url('../images/certif-images/desktop-bg.jpg');
+    padding: 202px 0 0;
   }
 }
 
-.section__title-wrapper {
-  margin: 0 auto;
-  margin-bottom: 35px;
+
+
+.certificate-title {
+  margin: 0 auto 23px;
+  letter-spacing: 0.9px;
+  color: rgb(255, 255, 255);
   text-align: center;
-
-  &_title {
-    margin-bottom: 23px;
-    letter-spacing: 0.9px;
-    color: rgb(255, 255, 255);
-
-    @media (min-width:768px) {
-      text-align: left;
-      @include font(20px, 700, 45px, rgb(255, 255, 255));
-    }
-  }
-
-  &_about {
-    font-family: $main-font;
-    @include font(16px, 700, 22px, rgb(255, 255, 255));
-    letter-spacing: 0.48px;
-
-    @media (min-width:768px) {
-      @include font(25px, 700, 35px, rgb(255, 255, 255));
-      letter-spacing: 1px;
-    }
-
-  }
-
-  @media (max-width: 767px) {
-    max-width: 230px;
-  }
 
   @media (min-width:768px) {
     text-align: left;
+    @include font(20px, 700, 45px, rgb(255, 255, 255));
+    letter-spacing: 1.2px;
+    margin: 0 0 46px 50px;
+  }
+
+  @media (min-width: 1440px) {
+    @include font(30px, 700, 45px, rgb(255, 255, 255));
+    letter-spacing: 1.8px;
+    margin: 0 0 70px 122px;
+  }
+}
+
+.certificate-title_about {
+  margin: 0 auto 35px;
+  font-family: $main-font;
+  @include font(16px, 700, 22px, rgb(255, 255, 255));
+  letter-spacing: 0.48px;
+  text-align: center;
+  max-width: 230px;
+
+  @media (min-width:768px) {
+    @include font(25px, 700, 35px, rgb(255, 255, 255));
+    letter-spacing: 1px;
     max-width: 380px;
-    margin: 0 0 67px 50px;
+    text-align: left;
+    margin: 0 0 10px 50px;
+  }
+
+  @media (min-width: 1440px) {
+    @include font(35px, 700, 50px, rgb(255, 255, 255));
+    letter-spacing: 1.4px;
+    max-width: 520px;
+    margin: 0 0 0 122px;
   }
 }
 
 
+.certificate-overlay {
+  @media (min-width: 768px) {
+    position: relative;
+    max-width: 710px;
+    padding-bottom: 50px;
 
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-image: url('../images/certif-images/planet.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 240px;
+      height: 135px;
+      background-position: center;
+      left: 65%;
+      bottom: 150%;
+    }
+  }
 
+  @media (min-width: 1440px) {
+    max-width: 870px;
+    padding-bottom: 200px;
 
+    &::before {
+      left: 18%;
+      bottom: 235%;
+    }
+  }
+}
 
 .certificate-wrapper {
   position: relative;
@@ -67,21 +107,44 @@
   justify-content: space-between;
 
   @media (min-width:768px) {
+    position: absolute;
+
     justify-content: center;
     background-image: url('../images/certif-images/confetti.svg');
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
+    padding-bottom: 120px;
+    left: 6%;
+  }
+
+  @media (min-width: 1440px) {
+    left: 40%;
+    bottom: 30%;
+    padding-top: 20px;
+    padding-right: 170px;
+    padding-left: 130px;
+    padding-bottom: 120px;
+    background-position: right;
   }
 
 }
 
+
+
 .certificate-img {
   box-shadow: 3px 2.5px 3px 0px rgba(0, 0, 0, 0.3);
-  transition: all 200ms linear;
+  // transition: all 200ms linear;
 
   &__certif-1 {
     position: absolute;
     transform: translateX(35%);
+
+    @media (min-width:768px) {
+      transform: translateX(1%);
+      padding-top: 40px;
+    }
   }
 
   //     &:hover {
@@ -90,9 +153,7 @@
   //   }
 
   &__certif-2 {
-    // width: 126px;
-    // height: 178px;
-    padding-top: 12px;
+    padding-top: 14px;
 
     // &:hover {
     //   position: absolute;
@@ -104,27 +165,23 @@
     // }
 
     // &:hover .certificate-img__certif-1 {
-    //   position: static;
     //   transform: translateX(-35%);
     //   width: 126px;
     //   height: 178px;
     //   padding-top: 24px;
     // }
+
+    @media (min-width:768px) {
+      padding-top: 62px;
+    }
   }
 
   &__certif-3 {
-    // width: 140px;
-    // height: 197px;
-    padding-top: 24px;
+    padding-top: 12px;
 
-
-    // &:hover {
-    //   width: 160px;
-    //   height: 227px;
-    //   padding: 0;
-    //   z-index: 3;
-    //   transform: translateX(40%);
-    // }
+    @media (min-width:768px) {
+      padding-top: 58px;
+    }
   }
 }
 
