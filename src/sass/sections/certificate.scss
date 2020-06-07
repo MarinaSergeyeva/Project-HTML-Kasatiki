@@ -1,16 +1,17 @@
 .section-certificate {
   padding-top: 40px;
   padding-bottom: 80px;
-  background-image: url('../images/certif-images/header-bg.jpg');
+  background-image: url('../images/certif-images/section-4-bg.svg');
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: 60% 0%;
+  background-size: cover;
 
   @media (min-width: 768px) {
-    background-image: url('../images/certif-images/tablet-bg.jpg');
+    // background-image: url('../images/certif-images/tablet-bg.jpg');
   }
 
   @media (min-width: 1440px) {
-    background-image: url('../images/certif-images/desktop-bg.jpg');
+    // background-image: url('../images/certif-images/desktop-bg.jpg');
   }
 }
 
@@ -89,9 +90,9 @@
   //   }
 
   &__certif-2 {
-    width: 126px;
-    height: 178px;
-    padding-top: 24px;
+    // width: 126px;
+    // height: 178px;
+    padding-top: 12px;
 
     // &:hover {
     //   position: absolute;
@@ -112,9 +113,9 @@
   }
 
   &__certif-3 {
-    width: 140px;
-    height: 197px;
-    padding-top: 12px;
+    // width: 140px;
+    // height: 197px;
+    padding-top: 24px;
 
 
     // &:hover {
