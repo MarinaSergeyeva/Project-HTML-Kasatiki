@@ -1,30 +1,37 @@
 .footer {
-  background-image: url(../../images/footer/footer-bg.jpg);
+  background-image: url(../images/footer/footer-bg.jpg);
   background-size: 100% 675px;
   background-repeat: no-repeat;
   background-position: bottom;
 
   @media (min-width: 768px) {
-    background-image: url(../../images/footer/footer-bg-md.jpg);
+    background-image: url(../images/footer/footer-bg-md.jpg);
     background-size: 100% 420px;
   }
 
   @media (min-width: 1440px) {
-    background-image: url(../../images/footer/footer-bg-lg.jpg);
+    background-image: url(../images/footer/footer-bg-lg.jpg);
     background-size: 100% 494px;
   }
 
+  &__info {
+    display: flex;
+  }
+
   &__pic {
-    @include size(118px, 188px);
 
-    @media (max-width:767px) {
-      display: none;
-    }
+    &_md {
+      @include size(118px, 188px);
 
-    @media (min-width: 768px) {
-      position: absolute;
-      bottom: 97px;
-      right: 55px;
+      @media (max-width:767px) {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        position: absolute;
+        bottom: 97px;
+        right: 55px;
+      }
     }
   }
 
@@ -66,6 +73,10 @@
     margin-left: 52px;
   }
 
+  @media (min-width: 1440px) {
+    margin-right: 122px;
+  }
+
   &__link {
     display: block;
     text-align: center;
@@ -91,77 +102,77 @@
 }
 
 .media {
-  // display: flex;
+  display: flex;
+
+  @media (max-width:767px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   @media (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: start;
     margin-bottom: 48px;
+    margin-left: 52px;
+  }
+}
+
+.btn {
+  @extend %btn-base;
+  border-radius: 32px;
+
+  @media (min-width: 768px) {
+    position: relative;
+    margin: 0;
   }
 
-  .btn {
-    @extend %btn-base;
-    border-radius: 32px;
-    display: block;
+  &_gradient {
+    @include btn($btn-color, #ffffff, 22px 76px, 270px);
+    @include font(13px, 700, 1.2, #ffffff);
+    background: $main-gradient;
+    box-shadow: 5.5px 9.526px 16px 0px rgba(90, 118, 233, 0.23);
+
+    @media (max-width: 767px) {
+      margin: 0 auto;
+      margin-bottom: 36px;
+    }
 
     @media (min-width: 768px) {
-      display: flex;
-      margin: 0;
-    }
-
-    &_gradient {
-      @include btn($btn-color, #ffffff, 22px 76px, 270px);
-      @include font(13px, 700, 1.2, #ffffff);
-      background: $main-gradient;
-      box-shadow: 5.5px 9.526px 16px 0px rgba(90, 118, 233, 0.23);
-
-      @media (max-width: 767px) {
-        margin: 0 auto;
-        margin-bottom: 36px;
-      }
-
-      @media (min-width: 768px) {
-        @include btn($btn-color, #ffffff, 15px 48px, 240px);
-        @include font(16px, 700, 26px, #ffffff);
-        margin-right: 40px;
-        margin-left: 52px;
-      }
-    }
-  }
-
-  .socials {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-
-    @media (min-width: 768px) {
-      margin: 0;
-    }
-
-    @media (min-width: 1440px) {
-      display: none;
-    }
-
-    &__item {
-      &:not(:last-child) {
-        margin-right: 18px;
-      }
-    }
-
-    &__link {
-      display: block;
-    }
-
-    &__icon-telegram,
-    &__icon-facebook,
-    &__icon-youtube {
-      @include size(42px, 42px);
+      @include btn($btn-color, #ffffff, 15px 48px, 240px);
+      @include font(16px, 700, 26px, #ffffff);
+      letter-spacing: 0.48px;
+      margin-right: 40px;
     }
   }
 }
 
 .socials {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__icon-telegram,
+  &__icon-facebook,
+  &__icon-youtube {
+    @include size(42px, 42px);
+  }
+
   &_desktop {
     display: flex;
 
@@ -171,12 +182,21 @@
   }
 }
 
+.terms-socials {
+  display: flex;
+  align-items: center;
+}
+
 .terms {
   text-align: center;
 
   @media (min-width: 768px) {
     display: flex;
     margin-left: 52px;
+  }
+
+  @media (min-width:1440px) {
+    margin-right: 90px;
   }
 
   &__item {
