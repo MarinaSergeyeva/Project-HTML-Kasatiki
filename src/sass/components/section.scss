@@ -1,24 +1,47 @@
 .section {
-  padding: 50px 0;
+    padding: 50px 0;
 
-  &__title {
-    font-family: $secondary-font;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: 0.06px;
-    color: $main-font-color;
-    text-transform: uppercase;
-    text-align: center;
+    &__title {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.06px;
+        color: $main-font-color;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: $secondary-font;
 
-    &::before {
-      content: '\005B  ';
-      color: $main-decoration-color;
+        &::before {
+        color: $main-decoration-color;
+        content: '\005B ';
+        }
+
+        &::after {
+        content: ' \005D';
+        color: $main-decoration-color;
+        }
     }
+}
 
-    &::after {
-      content: '  \005D';
-      color: $main-decoration-color;
+@media (min-width: 768px) {
+    .section {
+        padding: 90px 0;
+    
+    &__title {
+        font-size: 20px;
+        line-height: 45px;
+        letter-spacing: 1.2px;
+        }
     }
-  }
+}
+
+@media (min-width: 1440px) {
+    .section {
+        padding: 130px 0;
+
+        &__title {
+            font-size: 30px;
+            letter-spacing: 1.8px;
+        }
+    }
 }
