@@ -14,16 +14,11 @@
     background-size: 100% 494px;
   }
 
-  &__info {
-    display: flex;
-  }
-
   &__pic {
-
     &_md {
       @include size(118px, 188px);
 
-      @media (max-width:767px) {
+      @media (max-width: 767px) {
         display: none;
       }
 
@@ -34,8 +29,6 @@
       }
     }
   }
-
-
 }
 
 .logo {
@@ -55,6 +48,10 @@
       margin: 0;
     }
   }
+}
+
+.contacts-media__wrapper {
+  // display: flex;
 }
 
 .contacts {
@@ -104,7 +101,7 @@
 .media {
   display: flex;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -195,7 +192,7 @@
     margin-left: 52px;
   }
 
-  @media (min-width:1440px) {
+  @media (min-width: 1440px) {
     margin-right: 90px;
   }
 
