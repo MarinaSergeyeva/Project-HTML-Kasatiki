@@ -63,22 +63,25 @@
     background-image: url('../images/course/icon-real-project.svg');
 }
 
-.course-btn {
+.btn {
     @extend %btn-base;
-    @include btn ($btn-color, rgb(255, 255, 255), 24px 0 22px, 270px);
-    @include font (13px, 700, 1.2, rgb(255, 255, 255));
-    font-family: $main-font;
     display: block;
-    margin: 0 auto;
-    height: auto;
-    box-shadow: 0px 13px 17.1px 0.9px rgba(238, 193, 77, 0.4);
-    border-radius: 35px;
+    border-radius: 32px;
 
-    &:hover,
-    &:focus {
-        background-color: rgb(255, 255, 255);
-        color: $btn-color;
-        border: 1px solid $btn-color;
+    &_yellow-gradient {
+        @include font (13px, 700, 1.2, rgb(255, 255, 255));
+        @include btn ($btn-color, rgb(255, 255, 255), 24px 0 22px, 270px);
+        font-family: $main-font;
+        margin: 0 auto;
+        height: auto;
+        box-shadow: 0px 13px 17.1px 0.9px rgba(238, 193, 77, 0.4);
+
+        &:hover,
+        &:focus {
+            background-color: rgb(255, 255, 255);
+            color: $btn-color;
+            border: 1px solid $btn-color;
+        }
     }
 }
 
@@ -108,7 +111,7 @@
         }
     }
 
-    .course-btn {
+    .btn_yellow-gradient{
         @include btn ($btn-color, rgb(255, 255, 255), 24px 0 22px, 400px);
         @include font (19px, 700, 1.2, rgb(255, 255, 255));
     }
