@@ -97,7 +97,6 @@
     background-size: cover;
     width: 100%;
     padding-bottom: 120px;
-    left: 6%;
 
     &::before {
       content: '';
@@ -118,9 +117,9 @@
     left: 32%;
     bottom: 5%;
     background-position: right;
-    width: 950px;
-    padding: 100px 30px 140px 0;
-    background-position: right;
+    // width: 900px;
+    padding-top: 50px;
+
 
     &::before {
       left: -15%;
