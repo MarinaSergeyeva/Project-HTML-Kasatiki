@@ -1,12 +1,24 @@
 .promo {
-
   padding: 20px 0 0 0;
+
+  @media (min-width: 768px) {
+    padding: 75px 0 0 0;
+  }
+
+  @media (min-width: 1450px) {
+    padding: 70px 0 0 0;
+  }
 
   &__description {
     @include font(20px, 700, 26px, $main-font-color);
     font-family: $main-font;
-    letter-spacing: 0.03px;
+    letter-spacing: 0.3px;
     text-align: center;
+
+    @media (min-width: 1450px) {
+      width: 690px;
+      text-align: left;
+    }
 
     &_color {
       color: $main-decoration-color;
@@ -14,30 +26,77 @@
 
     &_br {
       display: block;
+
+      @media (min-width: 1450px) {
+        display: inline;
+      }
+    }
+
+    &_wrapper {
+      margin-bottom: 16px;
+
+      @media (min-width: 768px) {
+        margin-bottom: 30px;
+      }
+
+      @media (min-width: 1450px) {
+        margin-bottom: 0px;
+        transform: translateX(-35px);
+      }
     }
 
     @media (min-width: 768px) {
       @include font(35px, 700, 45px, $main-font-color);
     }
+
+    @media (min-width: 1450px) {
+      @include font(55px, 700, 75px, $main-font-color);
+    }
   }
 
   &__container {
     width: 320px;
-    padding-top: 14px;
     margin: 0 auto;
+
+    @media (min-width: 768px) {
+      width: 710px;
+    }
+
+    @media (min-width: 1450px) {
+      width: 1450px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+
+    @media (min-width: 1660px) {
+      width: 1660px;
+    }
   }
 
   &__list {
-    display: flex;
-    justify-content: center;
-
+    position: relative;
+    margin-right: 21%;
 
     &_wrapper {
-      background-image: url(../../images/promo/3boys-sm/bg-section1-sm.jpg);
+      display: flex;
+      justify-content: flex-end;
+      background-image: url(../images/promo/3boys-sm/bg-section1-sm.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      padding: 35px 45px 80px 0;
+      padding: 40px 0 76px 0;
+
+      @media (min-width: 768px) {
+        background-image: url(../images/promo/3boys-md/bg-section1-md.jpg);
+        padding: 92px 0 172px 0;
+      }
+
+      @media (min-width: 1450px) {
+        width: 970px;
+        background-image: url(../images/promo/3boys-lg/bg-section1-lg.jpg);
+        padding: 115px 0 230px 0;
+      }
     }
   }
 
@@ -48,14 +107,22 @@
       @include size(227px, 227px);
     }
 
+    @media (min-width: 1450px) {
+      @include size(372px, 372px);
+    }
+
     &_size {
       @include size(82px, 82px);
-      position: relative;
-      top: 60px;
-      left: 30px;
+      position: absolute;
+      top: 49%;
+      left: -44%;
 
       @media (min-width: 768px) {
         @include size(148px, 148px);
+      }
+
+      @media (min-width: 1450px) {
+        @include size(252px, 252px);
       }
     }
   }
@@ -63,9 +130,19 @@
   &__image {
     border-style: solid;
     border-width: 5px;
-    border-color: rgba(240, 240, 240, .65);
+    border-color: rgba(240, 240, 240, .5);
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, .65);
+    background-color: rgba(255, 255, 255, .5);
     box-shadow: 7.5px 12.99px 25px 0px rgba(96, 96, 97, 0.21);
+
+    @media (min-width: 768px) {
+      border-width: 10px;
+      box-shadow: 15px 25.981px 40px 0px rgba(96, 96, 97, 0.21);
+    }
+
+    @media (min-width: 1450px) {
+      border-width: 15px;
+      box-shadow: 34.5px 59.756px 50px 0px rgba(96, 96, 97, 0.21);
+    }
   }
 }

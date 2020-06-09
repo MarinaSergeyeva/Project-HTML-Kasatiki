@@ -1,0 +1,173 @@
+.prepare {
+
+  &__container {
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    width: 205px;
+    margin: 0 auto 24px;
+
+    @media (min-width: 768px) {
+      width: 680px;
+      margin: 0 auto 38px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background-image: url(../images/specialists/specialists-sm/code-sm.jpg);
+      width: 39px;
+      height: 39px;
+      margin: 0 auto 30px;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-width: 768px) {
+        background-image: url(../images/specialists/specialists-sm/code-sm.jpg);
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 34px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__proposition {
+    @include font(16px, 700, 22px, $main-decoration-color);
+    letter-spacing: 0.03em;
+    text-align: center;
+    padding-top: 22px;
+
+    @media (min-width: 768px) {
+      padding-top: 26px;
+      @include font(20px, 700, 25px, $main-decoration-color);
+    }
+
+    &_br {
+      display: block;
+    }
+  }
+
+  &__list {
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+
+    @media (min-width: 768px) {
+      width: 340px;
+    }
+
+    &_light {
+      background-color: rgb(245, 249, 254);
+    }
+
+    &_dark {
+      background-color: rgb(232, 241, 250);
+    }
+
+    &_wrapper {
+      width: 236px;
+      margin: 0 auto;
+      padding: 40px 0;
+
+
+      @media (min-width: 768px) {
+        width: 270px;
+        padding: 46px 0;
+      }
+
+      @media (min-width: 1450px) {
+        width: 300px;
+        padding: 60px 0;
+      }
+    }
+  }
+
+  &__title {
+    @include font(20px, 700, 25px, $main-font-color);
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      @include font(25px, 700, 25px, $main-font-color);
+      margin-bottom: 36px;
+    }
+
+    @media (min-width: 1450px) {
+      @include font(30px, 700, 36px, $main-font-color);
+      margin-bottom: 26px
+    }
+
+    &::before {
+      content: "";
+      background-image: url(../images/specialists/specialists-sm/star.png);
+      width: 18px;
+      height: 17px;
+      margin-right: 17px;
+    }
+  }
+
+  &__conditions {
+    @include font(25px, 700, 30px, $main-decoration-color);
+    letter-spacing: 0.015em;
+    margin: 0 0px 15px 0;
+    position: relative;
+
+    @media (min-width: 768px) {
+      @include font(30px, 700, 36px, $main-decoration-color);
+    }
+
+    @media (min-width: 1450px) {
+      @include font(40px, 700, 48px, $main-decoration-color);
+      margin: 0 0 20px 0;
+    }
+
+    &_age {
+      @include font(13px, 400, 22px, $main-decoration-color);
+      font-family: $main-font;
+      position: absolute;
+      bottom: 20px;
+      left: 72px;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        left: 87px;
+      }
+
+      @media (min-width: 1450px) {
+        left: 115px;
+      }
+
+      &::after {
+        content: "";
+        width: 33px;
+        height: 1px;
+        background-color: rgb(238, 191, 62);
+        position: absolute;
+        display: block;
+      }
+    }
+  }
+
+  &__description {
+    @include font(14px, 400, 24px, $main-font-color);
+    letter-spacing: 0.03em;
+    font-family: $main-font;
+
+    @media (min-width: 768px) {
+      @include font(16px, 400, 30px, $main-font-color);
+    }
+  }
+}
