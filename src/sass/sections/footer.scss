@@ -1,33 +1,95 @@
 .footer {
-  background-image: url(../../images/footer/footer-bg.jpg);
-  background-size: cover;
+  background-image: url(../images/footer/footer-bg.jpg);
+  background-size: 100% 675px;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: bottom;
+
+  @media (min-width: 768px) {
+    background-image: url(../images/footer/footer-bg-md.jpg);
+    background-size: 100% 420px;
+  }
+
+  @media (min-width: 1440px) {
+    background-image: url(../images/footer/footer-bg-lg.jpg);
+    background-size: 100% 494px;
+  }
+
+  &__pic {
+    &_md {
+      @include size(118px, 188px);
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        position: absolute;
+        bottom: 97px;
+        right: 55px;
+      }
+    }
+  }
 }
 
 .logo {
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin-bottom: 26px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: start;
+    margin-left: 52px;
+  }
+
+  &_img {
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+  }
 }
 
-.logo-icon-footer {
-  width: 110px;
-  margin-bottom: 26px;
+.contacts-media__wrapper {
+  // display: flex;
 }
 
 .contacts {
   margin: 0 auto;
   font-family: $main-font;
   @include font(14px, 400, 24px, $main-font-color);
+  letter-spacing: 0.56px;
   margin-bottom: 28px;
+
+  @media (min-width: 768px) {
+    @include font(16px, 400, 25px, $main-font-color);
+    letter-spacing: 0.64px;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 44px;
+    margin-left: 52px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-right: 122px;
+  }
 
   &__link {
     display: block;
     text-align: center;
     color: $main-font-color;
 
+    @media (min-width: 768px) {
+      text-align: left;
+      margin-right: 70px;
+    }
+
     &-adress {
       margin-bottom: 30px;
+
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
 
       &-br {
         display: block;
@@ -36,24 +98,61 @@
   }
 }
 
+.media {
+  display: flex;
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 48px;
+    margin-left: 52px;
+  }
+}
+
 .btn {
   @extend %btn-base;
   border-radius: 32px;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 36px;
 
-  &-footer {
+  @media (min-width: 768px) {
+    position: relative;
+    margin: 0;
+  }
+
+  &_gradient {
     @include btn($btn-color, #ffffff, 22px 76px, 270px);
+    @include font(13px, 700, 1.2, #ffffff);
     background: $main-gradient;
     box-shadow: 5.5px 9.526px 16px 0px rgba(90, 118, 233, 0.23);
+
+    @media (max-width: 767px) {
+      margin: 0 auto;
+      margin-bottom: 36px;
+    }
+
+    @media (min-width: 768px) {
+      @include btn($btn-color, #ffffff, 15px 48px, 240px);
+      @include font(16px, 700, 26px, #ffffff);
+      letter-spacing: 0.48px;
+      margin-right: 40px;
+    }
   }
 }
 
 .socials {
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
   margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
 
   &__item {
     &:not(:last-child) {
@@ -70,14 +169,41 @@
   &__icon-youtube {
     @include size(42px, 42px);
   }
+
+  &_desktop {
+    display: flex;
+
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
 }
 
-.copyright {
+.terms-socials {
+  display: flex;
+  align-items: center;
+}
+
+.terms {
   text-align: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+    margin-left: 52px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-right: 90px;
+  }
 
   &__item {
     &:not(:last-child) {
       margin-bottom: 10px;
+
+      @media (min-width: 768px) {
+        margin-right: 78px;
+        margin-bottom: 0px;
+      }
     }
   }
 
