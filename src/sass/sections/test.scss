@@ -1,0 +1,117 @@
+.test {
+  background-image: url(../images/test/header-bg-mob.png);
+  background-repeat: no-repeat;
+  background-position: top;
+
+  &__header {
+    @include font (16px, 400, 22px, #ffffff);
+    text-align: center;
+    letter-spacing: 0.48px;
+    padding: 24px 16px;
+    font-family: $main-font, sans-serif;
+
+
+    &::before {
+      content: '';
+      display: block;
+      height: 80px;
+      background-image: url(../images/test/icon-sputnik-mob.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__wrapper {
+    font-family: $main-font, sans-serif;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 40px 0px rgba(1, 1, 0, 0.08);
+    padding: 34px 34px 16px;
+  }
+
+  &__about {
+    @include font (14px, 400, 24px, #6b6f7a);
+    text-align: left;
+    letter-spacing: 0.48px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @include font (14px, 600, 21px, $main-decoration-color);
+    margin-bottom: 18px;
+  }
+
+  &__question {
+    @include font (17px, 600, 27px, $main-font-color);
+    margin-bottom: 26px;
+  }
+}
+
+.test-list_label {
+  @include font (14px, 400, 1.2, $main-decoration-color);
+}
+
+.test-answer {
+  display: none;
+
+
+  &_item {
+    @include font (14px, 400, 24px, #6b6f7a);
+  }
+}
+
+.test-answer_item {
+  margin-top: 12px;
+  margin-bottom: 42px;
+}
+
+.test-answer_item:last-child {
+  margin-bottom: 24px;
+}
+
+
+.input-description {
+  @include font (14px, 400, 1.2, $main-decoration-color);
+}
+
+.test-list_label::before {
+  content: '';
+  display: inline-block;
+  border: 2px solid $main-decoration-color;
+  width: 16px;
+  height: 16px;
+  padding: 2px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.test-answer:checked+.test-list_label::before {
+  background-color: $main-decoration-color;
+  background-clip: content-box;
+}
+
+.nav-wrapper {
+  text-align: center;
+}
+
+
+.test-list__prev,
+.test-list__next {
+  display: none;
+}
+
+.test-list__prev-btn,
+.test-list__next-btn {
+  border: none;
+  color: #6b6f7a;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.numeral {
+  @include font (14px, 700, 1.2, $main-font-color);
+
+}
+
+.question-number {
+  color: $main-decoration-color;
+}
