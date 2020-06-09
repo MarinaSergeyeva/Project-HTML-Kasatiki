@@ -1,0 +1,26 @@
+.study-list {
+    @extend %flex-between;
+    flex-direction: column;
+    margin: 25px 0 0;
+    padding: 46px 0 65px;
+    background-image: url('../images/study/study-bg-sm.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__item {
+        &-title {
+            font-family: $main-font; // должен быть - font-family: "GothamPro";
+            @include font (20px, 700, 30px, $secondary-font-color);
+            margin-bottom: 14px;
+            letter-spacing: 0.6px;
+
+        }  
+    }
+
+    &__description_text {
+        
+    }
+}
+
+
+
