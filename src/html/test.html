@@ -1,21 +1,77 @@
-<!-- <section>
-    <p>Пройдіть тест, щоб дізнатися який напрямок в IT підійде  вашій дитині</p>
-    <h2>Tест</h2>
-    <p>Ми створили тест, який визначить найбільш відповідний для вас курс, враховуючи особливості характеру і особистості. Всього 2 хвилини - і ви дізнаєтеся, яка професія в IT підійде саме для вашої дитини.</p>
-    
+ <section class="test">
+   <div class="container">
+     <p class="test__header">Пройдіть тест, щоб дізнатися який напрямок в IT підійде вашій дитині</p>
+     <div class="test__wrapper">
+       <h2 class="section__title section__title_indent">Тест<span class="section__title_decor">&#95;</span></h2>
+       <p class="test__about">Ми створили тест, який визначить найбільш відповідний для вас курс, враховуючи особливості
+         характеру і особистості. Всього 2 хвилини - і ви дізнаєтеся, яка професія в IT підійде саме для вашої дитини.
+       </p>
+       <h3 class="test__title">Питання</h3>
+       <form class="test-list owl-carousel">
+         <div class="test-list__item">
+           <p class="test__question">В яку гру більш за все полюбляє грати ваша дитина?</p>
+           <input type="radio" id="answer1.1" name="answer1" class="test-answer" value="Майнкрафт">
+           <label class="test-list_label" for="answer1.1">
+             <span class="input-description">Відповідь 1</span>
+             <p class="test-answer_item">Майнкрафт</p>
+           </label>
+           <input type="radio" id="answer1.2" name="answer1" class="test-answer" value="Знайди 10 відмінностей">
+           <label class="test-list_label" for="answer1.2">
+             <span class="input-description">Відповідь 2</span>
+             <p class="test-answer_item">Знайди 10 відмінностей</p>
+           </label>
+           <input type="radio" id="answer1.3" name="answer1" class="test-answer" value="Збирати пазли">
+           <label class="test-list_label" for="answer1.3">
+             <span class="input-description">Відповідь 3</span>
+             <p class="test-answer_item">Збирати пазли</p>
+           </label>
+           <input type="radio" id="answer1.4" name="answer1" class="test-answer" value="Конструктор LEGO">
+           <label class="test-list_label" for="answer1.4">
+             <span class="input-description">Відповідь 4</span>
+             <p class="test-answer_item">Конструктор LEGO</p>
+           </label>
+           <div class="nav-wrapper">
+             <button type="button" class="test-list__prev-btn"> &#8592; <span class="test-list__prev"> Назад
+               </span></button>
+             <span class="question-number numeral">01</span>
+             <span class="question-amount numeral"> / 16</span>
+             <button type="button" class="test-list__next-btn"><span class="test-list__next">Далі</span> &#8594;
+             </button>
+           </div>
+         </div>
 
-</section>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="458px" height="38px">
-    <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="30px" x="0px" y="38px">
-        <tspan dy="-5px">
-            <tspan font-size="30px" font-family="Oswald" fill="#FEC02A">&#91;</tspan>
-            <tspan font-size="30px" font-family="Oswald" fill="#282828">
-                &#32;IT&#45;&#1092;&#1072;&#1093;&#1110;&#1074;&#1094;&#1110;&#32;&#45;&#32;&#1089;&#1091;&#1095;&#1072;&#1089;&#1085;&#1110;&#32;&#1075;&#1077;&#1088;&#1086;&#1111;&#95;&#32;
-            </tspan>
-            <tspan font-size="30px" font-family="Oswald" fill="#FEC02A">&#93;</tspan>
-        </tspan>
-        <tspan x="0px" dy="1.2em">
-            <tspan font-size="30px" font-family="Oswald" fill="#282828"> </tspan>
-        </tspan>
-    </text>
-</svg> -->
+         <div class="test-list__item">
+           <p class="test__question">В яку гру більш за все полюбляє грати ваша дитина?</p>
+           <input type="radio" id="answer1.1" name="answer1" class="test-answer" value="Майнкрафт">
+           <label class="test-list_label" for="answer1.1">
+             <span class="input-description">Відповідь 1</span>
+             <p class="test-answer_item">Майнкрафт</p>
+           </label>
+           <input type="radio" id="answer1.2" name="answer1" class="test-answer" value="Знайди 10 відмінностей">
+           <label class="test-list_label" for="answer1.2">
+             <span class="input-description">Відповідь 2</span>
+             <p class="test-answer_item">Знайди 10 відмінностей</p>
+           </label>
+           <input type="radio" id="answer1.3" name="answer1" class="test-answer" value="Збирати пазли">
+           <label class="test-list_label" for="answer1.3">
+             <span class="input-description">Відповідь 3</span>
+             <p class="test-answer_item">Збирати пазли</p>
+           </label>
+           <input type="radio" id="answer1.4" name="answer1" class="test-answer" value="Конструктор LEGO">
+           <label class="test-list_label" for="answer1.4">
+             <span class="input-description">Відповідь 4</span>
+             <p class="test-answer_item">Конструктор LEGO</p>
+           </label>
+           <div class="nav-wrapper">
+             <button type="button" class="test-list__prev-btn"> &#8592; <span class="test-list__prev"> Назад
+               </span></button>
+             <span class="question-number numeral">01</span>
+             <span class="question-amount numeral"> / 16</span>
+             <button type="button" class="test-list__next-btn"><span class="test-list__next">Далі</span> &#8594;
+             </button>
+           </div>
+         </div>
+       </form>
+     </div>
+   </div>
+ </section>
