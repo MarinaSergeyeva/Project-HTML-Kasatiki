@@ -12,7 +12,7 @@
       padding-bottom: 34px;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1450px) {
       @include font(90px, 900, 108px, rgb(233, 233, 243));
       padding-bottom: 55px;
     }
@@ -25,14 +25,14 @@
       margin-bottom: 50px;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1450px) {
       margin-bottom: 75px;
     }
   }
 
   &__list {
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1450px) {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -53,7 +53,7 @@
         padding: 95px 0 90px 0;
       }
 
-      @media (min-width: 1440px) {
+      @media (min-width: 1450px) {
         background-image: url(../images/specialists/specialists-lg/section-2-bg-lg.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -79,7 +79,7 @@
       display: flex;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1450px) {
       width: 625px;
       margin: 0 0 70px 0;
     }
@@ -110,7 +110,7 @@
       transform: translateX(25px);
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1450px) {
       @include font(35px, 400, 42px, $main-decoration-color);
     }
 
@@ -121,7 +121,7 @@
         flex-direction: column-reverse;
       }
 
-      @media (min-width: 1440px) {
+      @media (min-width: 1450px) {
         width: 331px;
         padding-top: 50px;
       }
@@ -140,7 +140,7 @@
       letter-spacing: 0.03em;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1450px) {
       @include font(25px, 400, 35px, $main-font-color);
       margin-bottom: 70px;
     }
