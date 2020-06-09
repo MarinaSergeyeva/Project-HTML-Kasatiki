@@ -1,7 +1,6 @@
 .section-certificate {
-  padding: 40px 0 250px;
+  padding: 11% 0 71%;
   background-image: url('../images/certif-images/mobile-bg.jpg');
-  // background-image: url('../images/certif-images/section-4-bg.svg');
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
@@ -9,58 +8,66 @@
   @media (min-width: 768px) {
     background-image: url('../images/certif-images/tablet-bg.jpg');
     background-position: right;
-    padding: 84px 0 300px;
+    padding: 11% 0 38%;
 
   }
 
   @media (min-width: 1440px) {
     background-image: url('../images/certif-images/desktop-bg.jpg');
-    padding: 202px 0 0;
+    padding: 15% 0 2%;
+
   }
 }
 
+.certificate__title-wrapper {
+  max-width: 80%;
+  margin: 0 auto 35px;
+  text-align: center;
+
+  @media (min-width:768px) {
+    max-width: 53%;
+    text-align: left;
+    margin: 0 0 1.4% 7%;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 40%;
+    margin: 0 0 1.4% 2%;
+  }
+}
 
 .certificate-title {
   margin: 0 auto 23px;
   letter-spacing: 0.9px;
   color: rgb(255, 255, 255);
-  text-align: center;
 
   @media (min-width:768px) {
     text-align: left;
     @include font(20px, 700, 45px, rgb(255, 255, 255));
     letter-spacing: 1.2px;
-    margin: 0 0 46px 50px;
+    margin-bottom: 12%;
   }
 
   @media (min-width: 1440px) {
     @include font(30px, 700, 45px, rgb(255, 255, 255));
     letter-spacing: 1.8px;
-    margin: 0 0 70px 100px;
+    margin-bottom: 5.4%;
   }
 }
 
 .certificate-title_about {
-  margin: 0 auto 35px;
   font-family: $main-font;
   @include font(16px, 700, 22px, rgb(255, 255, 255));
   letter-spacing: 0.48px;
-  text-align: center;
-  max-width: 230px;
 
   @media (min-width:768px) {
     @include font(25px, 700, 35px, rgb(255, 255, 255));
     letter-spacing: 1px;
-    max-width: 380px;
-    text-align: left;
-    margin: 0 0 10px 50px;
   }
 
   @media (min-width: 1440px) {
     @include font(35px, 700, 50px, rgb(255, 255, 255));
     letter-spacing: 1.4px;
-    max-width: 520px;
-    margin: 0 0 50px 100px;
   }
 }
 
@@ -69,12 +76,12 @@
 
   @media (min-width: 768px) {
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 7%;
     margin: 0 auto;
   }
 
   @media (min-width: 1440px) {
-    padding-bottom: 150px;
+    padding-bottom: 10%;
   }
 }
 
@@ -89,7 +96,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 710px;
     height: 530px;
 
 
@@ -100,7 +106,7 @@
       background-image: url('../images/certif-images/planet.svg');
       background-repeat: no-repeat;
       background-size: cover;
-      width: 240px;
+      width: 33.8%;
       height: 135px;
       background-position: center;
       left: 60%;
@@ -109,14 +115,16 @@
   }
 
   @media (min-width: 1440px) {
-    right: 0;
-    bottom: 5%;
-    width: 870px;
-    height: 720px;
+    right: -10%;
+    bottom: -70%;
+    width: 70%;
+    height: 770px;
 
     &::before {
-      left: -20%;
-      bottom: 70%;
+      left: -25%;
+      bottom: 65%;
+      width: 30%;
+      height: 150px;
     }
   }
 
@@ -142,7 +150,8 @@
     }
 
     @media (min-width:768px) {
-      transform: translate(91%, 20%);
+      width: 34%;
+      transform: translate(91%, 18%);
 
       &:hover,
       &:focus {
@@ -151,7 +160,8 @@
     }
 
     @media (min-width:1440px) {
-      transform: translate(72%, 25%);
+      width: 39%;
+      transform: translate(72%, 29%);
 
       &:hover,
       &:focus {
@@ -171,20 +181,22 @@
     }
 
     @media (min-width:768px) {
+      width: 30%;
       transform: translate(63%, 27%);
 
       &:hover,
       &:focus {
-        transform: scale(1.2) translate(63%, 25%);
+        transform: scale(1.27) translate(50%, 22%);
       }
     }
 
     @media (min-width:1440px) {
-      transform: translate(45%, 35%);
+      width: 34%;
+      transform: translate(45%, 42%);
 
       &:hover,
       &:focus {
-        transform: scale(1.2) translate(45%, 31%);
+        transform: scale(1.27) translate(35%, 33%);
       }
     }
   }
@@ -200,20 +212,22 @@
     }
 
     @media (min-width:768px) {
+      width: 30.5%;
       transform: translate(155%, 26%);
 
       &:hover,
       &:focus {
-        transform: scale(1.2) translate(155%, 25%);
+        transform: scale(1.27) translate(130%, 22%);
       }
     }
 
     @media (min-width:1440px) {
-      transform: translate(130%, 34%);
+      width: 33%;
+      transform: translate(140%, 41%);
 
       &:hover,
       &:focus {
-        transform: scale(1.2) translate(120%, 30%);
+        transform: scale(1.27) translate(115%, 32%);
       }
     }
   }
