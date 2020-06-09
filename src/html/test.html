@@ -1,77 +1,100 @@
- <section class="test">
-   <div class="container">
-     <p class="test__header">Пройдіть тест, щоб дізнатися який напрямок в IT підійде вашій дитині</p>
-     <div class="test__wrapper">
-       <h2 class="section__title section__title_indent">Тест<span class="section__title_decor">&#95;</span></h2>
-       <p class="test__about">Ми створили тест, який визначить найбільш відповідний для вас курс, враховуючи особливості
-         характеру і особистості. Всього 2 хвилини - і ви дізнаєтеся, яка професія в IT підійде саме для вашої дитини.
-       </p>
-       <h3 class="test__title">Питання</h3>
-       <form class="test-list owl-carousel">
-         <div class="test-list__item">
-           <p class="test__question">В яку гру більш за все полюбляє грати ваша дитина?</p>
-           <input type="radio" id="answer1.1" name="answer1" class="test-answer" value="Майнкрафт">
-           <label class="test-list_label" for="answer1.1">
-             <span class="input-description">Відповідь 1</span>
-             <p class="test-answer_item">Майнкрафт</p>
-           </label>
-           <input type="radio" id="answer1.2" name="answer1" class="test-answer" value="Знайди 10 відмінностей">
-           <label class="test-list_label" for="answer1.2">
-             <span class="input-description">Відповідь 2</span>
-             <p class="test-answer_item">Знайди 10 відмінностей</p>
-           </label>
-           <input type="radio" id="answer1.3" name="answer1" class="test-answer" value="Збирати пазли">
-           <label class="test-list_label" for="answer1.3">
-             <span class="input-description">Відповідь 3</span>
-             <p class="test-answer_item">Збирати пазли</p>
-           </label>
-           <input type="radio" id="answer1.4" name="answer1" class="test-answer" value="Конструктор LEGO">
-           <label class="test-list_label" for="answer1.4">
-             <span class="input-description">Відповідь 4</span>
-             <p class="test-answer_item">Конструктор LEGO</p>
-           </label>
-           <div class="nav-wrapper">
-             <button type="button" class="test-list__prev-btn"> &#8592; <span class="test-list__prev"> Назад
-               </span></button>
-             <span class="question-number numeral">01</span>
-             <span class="question-amount numeral"> / 16</span>
-             <button type="button" class="test-list__next-btn"><span class="test-list__next">Далі</span> &#8594;
-             </button>
-           </div>
-         </div>
-
-         <div class="test-list__item">
-           <p class="test__question">В яку гру більш за все полюбляє грати ваша дитина?</p>
-           <input type="radio" id="answer1.1" name="answer1" class="test-answer" value="Майнкрафт">
-           <label class="test-list_label" for="answer1.1">
-             <span class="input-description">Відповідь 1</span>
-             <p class="test-answer_item">Майнкрафт</p>
-           </label>
-           <input type="radio" id="answer1.2" name="answer1" class="test-answer" value="Знайди 10 відмінностей">
-           <label class="test-list_label" for="answer1.2">
-             <span class="input-description">Відповідь 2</span>
-             <p class="test-answer_item">Знайди 10 відмінностей</p>
-           </label>
-           <input type="radio" id="answer1.3" name="answer1" class="test-answer" value="Збирати пазли">
-           <label class="test-list_label" for="answer1.3">
-             <span class="input-description">Відповідь 3</span>
-             <p class="test-answer_item">Збирати пазли</p>
-           </label>
-           <input type="radio" id="answer1.4" name="answer1" class="test-answer" value="Конструктор LEGO">
-           <label class="test-list_label" for="answer1.4">
-             <span class="input-description">Відповідь 4</span>
-             <p class="test-answer_item">Конструктор LEGO</p>
-           </label>
-           <div class="nav-wrapper">
-             <button type="button" class="test-list__prev-btn"> &#8592; <span class="test-list__prev"> Назад
-               </span></button>
-             <span class="question-number numeral">01</span>
-             <span class="question-amount numeral"> / 16</span>
-             <button type="button" class="test-list__next-btn"><span class="test-list__next">Далі</span> &#8594;
-             </button>
-           </div>
-         </div>
-       </form>
-     </div>
-   </div>
- </section>
+<section class="test">
+  <div class="container test__container">
+    <p class="test__header">Пройдіть тест, щоб дізнатися який напрямок в IT підійде вашій дитині</p>
+    <div class="test__wrapper">
+      <div class="title-description__wrapper">
+        <h2 class="section__title section__title_indent">Тест<span class="section__title_decor">&#95;</span></h2>
+        <p class="test__about">Ми створили тест, який визначить найбільш відповідний для вас курс, враховуючи
+          особливості характеру і особистості. Всього 2 хвилини - і ви дізнаєтеся, яка професія в IT підійде саме для
+          вашої дитини.
+        </p>
+      </div>
+      <form class="test-list owl-carousel">
+        <div class="test-list__item">
+          <div class="question-wrapper">
+            <h3 class="test__title">Питання</h3>
+            <div class="nav-wrapper_tablet">
+              <button type="button" class="btn-prev"> &#8592; <span class="btn-prev_span"> Назад
+                </span></button>
+              <span class="question-number numeral">02</span>
+              <span class="question-amount numeral"> / 16</span>
+              <button type="button" class="btn-next"><span class="btn-next_span">Далі</span> &#8594;</button>
+            </div>
+            <p class="test__question">В яку гру більш за все полюбляє грати ваша дитина?</p>
+            <div class="nav-wrapper_desktop">
+              <button type="button" class="btn-prev btn-prev_desktop">&#8592;<span class="btn-prev_span-desktop"> Назад
+                </span></button>
+              <button type="button" class="btn-next btn-next_desktop"><span class="btn-next_span-desktop">Далі</span>
+                &#8594;</button>
+            </div>
+          </div>
+          <div class="answer-wrapper">
+            <div class="answer-wrapper_cell">
+              <input type="radio" id="answer1.1" name="answer1" class="test-answer" value="Майнкрафт"><label
+                class="test-list_label" for="answer1.1"> Відповідь 1</label>
+              <p class="test-answer_item">Майнкрафт</p>
+            </div>
+            <div class="answer-wrapper_cell">
+              <input type="radio" id="answer1.2" name="answer1" class="test-answer" value="Знайди 10 відмінностей">
+              <label class="test-list_label" for="answer1.2"> Відповідь 2</label>
+              <p class="test-answer_item">Знайди 10 відмінностей</p>
+            </div>
+            <div class="answer-wrapper_cell">
+              <input type="radio" id="answer1.3" name="answer1" class="test-answer" value="Збирати пазли">
+              <label class="test-list_label" for="answer1.3">Відповідь 3</label>
+              <p class="test-answer_item">Збирати пазли</p>
+            </div>
+            <div class="answer-wrapper_cell">
+              <input type="radio" id="answer1.4" name="answer1" class="test-answer" value="Конструктор LEGO">
+              <label class="test-list_label" for="answer1.4">Відповідь 4</label>
+              <p class="test-answer_item">Конструктор LEGO</p>
+            </div>
+          </div>
+          <div class="nav-wrapper">
+            <button type="button" class="btn-prev"> &#8592; <span class="btn-prev_span"> Назад
+              </span></button>
+            <span class="question-number numeral">01</span>
+            <span class="question-amount numeral"> / 16</span>
+            <button type="button" class="btn-next"><span class="btn-next_span">Далі</span> &#8594;</button>
+          </div>
+        </div>
+        <div class="test-list__item">
+          <h3 class="test__title">Питання</h3>
+          <div class="nav-wrapper_tablet">
+            <button type="button" class="btn-prev"> &#8592; <span class="btn-prev_span"> Назад
+              </span></button>
+            <span class="question-number numeral">02</span>
+            <span class="question-amount numeral"> / 16</span>
+            <button type="button" class="btn-next"><span class="btn-next_span">Далі</span> &#8594;</button>
+          </div>
+          <p class="test__question">В яку гру більш за все полюбляє грати ваша дитина?</p>
+          <div class="nav-wrapper_desktop">
+            <button type="button" class="btn-prev btn-prev_desktop">&#8592;<span class="btn-prev_span-desktop"> Назад
+              </span></button>
+            <button type="button" class="btn-next btn-next_desktop"><span class="btn-next_span-desktop">Далі</span>
+              &#8594;</button>
+          </div>
+          <input type="radio" id="answer2.1" name="answer1" class="test-answer" value="Майнкрафт"><label
+            class="test-list_label" for="answer2.1"> Відповідь 1</label>
+          <p class="test-answer_item">Майнкрафт</p>
+          <input type="radio" id="answer2.2" name="answer1" class="test-answer" value="Знайди 10 відмінностей">
+          <label class="test-list_label" for="answer2.2"> Відповідь 2</label>
+          <p class="test-answer_item">Знайди 10 відмінностей</p>
+          <input type="radio" id="answer2.3" name="answer1" class="test-answer" value="Збирати пазли">
+          <label class="test-list_label" for="answer2.3">Відповідь 3</label>
+          <p class="test-answer_item">Збирати пазли</p>
+          <input type="radio" id="answer2.4" name="answer1" class="test-answer" value="Конструктор LEGO">
+          <label class="test-list_label" for="answer2.4">Відповідь 4</label>
+          <p class="test-answer_item">Конструктор LEGO</p>
+          <div class="nav-wrapper">
+            <button type="button" class="btn-prev"> &#8592; <span class="btn-prev_span"> Назад
+              </span></button>
+            <span class="question-number numeral">02</span>
+            <span class="question-amount numeral"> / 16</span>
+            <button type="button" class="btn-next"><span class="btn-next_span">Далі</span> &#8594;</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

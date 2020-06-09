@@ -2,6 +2,7 @@
   background-image: url(../images/test/header-bg-mob.png);
   background-repeat: no-repeat;
   background-position: top;
+  padding: 10px 16px;
 
   &__header {
     @include font (16px, 400, 22px, #ffffff);
@@ -9,7 +10,6 @@
     letter-spacing: 0.48px;
     padding: 24px 16px;
     font-family: $main-font, sans-serif;
-
 
     &::before {
       content: '';
@@ -25,7 +25,7 @@
     font-family: $main-font, sans-serif;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 8px 40px 0px rgba(1, 1, 0, 0.08);
-    padding: 34px 34px 16px;
+    padding: 34px 24px 16px;
   }
 
   &__about {
@@ -46,6 +46,10 @@
   }
 }
 
+.test-list {
+  padding-right: 24px;
+}
+
 .test-list_label {
   @include font (14px, 400, 1.2, $main-decoration-color);
 }
@@ -59,6 +63,12 @@
   }
 }
 
+.nav-wrapper_tablet,
+.nav-wrapper_desktop {
+  display: none;
+}
+
+
 .test-answer_item {
   margin-top: 12px;
   margin-bottom: 42px;
@@ -68,10 +78,6 @@
   margin-bottom: 24px;
 }
 
-
-.input-description {
-  @include font (14px, 400, 1.2, $main-decoration-color);
-}
 
 .test-list_label::before {
   content: '';
@@ -93,14 +99,13 @@
   text-align: center;
 }
 
-
-.test-list__prev,
-.test-list__next {
+.btn-prev_span,
+.btn-next_span {
   display: none;
 }
 
-.test-list__prev-btn,
-.test-list__next-btn {
+.btn-prev,
+.btn-next {
   border: none;
   color: #6b6f7a;
   background-color: rgb(255, 255, 255);
@@ -114,4 +119,121 @@
 
 .question-number {
   color: $main-decoration-color;
+  margin-left: 16px;
+}
+
+.question-amount {
+  margin-right: 16px;
+}
+
+@media (min-width: 768px) {
+  .test {
+    background-image: url(../images/test/header-tablet.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    padding: 10px 42px;
+
+    &__header {
+      padding: 70px 80px 28px;
+      @include font (20px, 400, 25px, #ffffff);
+
+      &::before {
+        content: '';
+        display: block;
+        height: 80px;
+        background-image: url(../images/test/icon-sputnik-tablet.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 20px;
+
+      }
+    }
+
+    &__about {
+      @include font (16px, 400, 30px, #6b6f7a);
+      letter-spacing: 0.48px;
+    }
+
+    &__wrapper {
+      padding: 34px 80px 16px 40px;
+
+    }
+
+    &__container {
+      width: 680px;
+    }
+  }
+
+  .test__title {
+    display: inline-block;
+    margin-right: 54px;
+    @include font (14px, 700, 21px, $main-font-color);
+  }
+
+
+  .nav-wrapper {
+    display: none;
+  }
+
+  .nav-wrapper_tablet {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .test {
+    background-image: url(../images/test/section-4-bg@1x.png);
+    padding: 10px 16px;
+
+    &__header {
+      @include font (30px, 400, 40px, #ffffff);
+      padding: 24px 16px;
+
+      &::before {
+        content: '';
+        display: block;
+        height: 80px;
+        background-image: url(../images/test/icon-sputnik-desk.svg);
+      }
+    }
+
+    &__container {
+      width: 1420px;
+    }
+
+    .test-list__item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .test__wrapper {
+      display: flex;
+      width: 100%;
+    }
+
+    .title-description__wrapper {
+      flex-basis: 30%;
+      flex-shrink: 0;
+    }
+
+    .test-list {
+      max-width: 70%;
+    }
+
+    .answer-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      &_cell {
+        width: 50%;
+      }
+    }
+
+    .test-list_label::before {
+      display: block;
+
+    }
+  }
+
+
 }
