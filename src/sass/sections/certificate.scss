@@ -62,7 +62,7 @@
     @include font(35px, 700, 50px, rgb(255, 255, 255));
     letter-spacing: 1.4px;
     max-width: 520px;
-    margin: 0 0 0 122px;
+    margin: 0 0 50px 122px;
   }
 }
 
@@ -72,30 +72,12 @@
     position: relative;
     max-width: 710px;
     padding-bottom: 50px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      display: block;
-      background-image: url('../images/certif-images/planet.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 240px;
-      height: 135px;
-      background-position: center;
-      left: 65%;
-      bottom: 150%;
-    }
+    margin: 0 auto;
   }
 
   @media (min-width: 1440px) {
     max-width: 870px;
-    padding-bottom: 200px;
-
-    &::before {
-      left: 18%;
-      bottom: 235%;
-    }
+    padding-bottom: 150px;
   }
 }
 
@@ -108,7 +90,6 @@
 
   @media (min-width:768px) {
     position: absolute;
-
     justify-content: center;
     background-image: url('../images/certif-images/confetti.svg');
     background-position: left;
@@ -116,17 +97,35 @@
     background-size: cover;
     width: 100%;
     padding-bottom: 120px;
-    left: 6%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-image: url('../images/certif-images/planet.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 240px;
+      height: 135px;
+      background-position: center;
+      left: 55%;
+      bottom: 110%;
+    }
   }
 
   @media (min-width: 1440px) {
-    left: 40%;
-    bottom: 30%;
-    padding-top: 20px;
-    padding-right: 170px;
-    padding-left: 130px;
-    padding-bottom: 120px;
+    left: 32%;
+    bottom: 5%;
     background-position: right;
+    // width: 900px;
+    padding-top: 50px;
+
+
+    &::before {
+      left: -15%;
+      bottom: 70%;
+    }
+
   }
 
 }
@@ -144,6 +143,10 @@
     @media (min-width:768px) {
       transform: translateX(1%);
       padding-top: 40px;
+    }
+
+    @media (min-width:1440px) {
+      padding-top: 14px;
     }
   }
 
@@ -174,6 +177,10 @@
     @media (min-width:768px) {
       padding-top: 62px;
     }
+
+    @media (min-width:1440px) {
+      padding-top: 30px;
+    }
   }
 
   &__certif-3 {
@@ -182,18 +189,9 @@
     @media (min-width:768px) {
       padding-top: 58px;
     }
+
+    @media (min-width:1440px) {
+      padding-top: 26px;
+    }
   }
 }
-
-
-
-
-
-
-
-// @mixin font($fs, $fw, $lh, $fc) {
-//   font-size: $fs;
-//   font-weight: $fw;
-//   line-height: $lh;
-//   color: $fc;
-// }
