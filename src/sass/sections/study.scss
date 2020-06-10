@@ -1,26 +1,134 @@
+.section__background {
+    position: relative;
+    z-index: 1  ;
+}
+
 .study-list {
+    position: absolute;
+    z-index: 2;
+    top: 75%;
+    left: 0;
+    right: 0;
     @extend %flex-between;
     flex-direction: column;
-    margin: 25px 0 0;
-    padding: 46px 0 65px;
+    padding: 46px 15px 65px 15px;
     background-image: url('../images/study/study-bg-sm.png');
     background-size: cover;
     background-repeat: no-repeat;
 
     &__item {
-        &-title {
-            font-family: $main-font; // должен быть - font-family: "GothamPro";
-            @include font (20px, 700, 30px, $secondary-font-color);
-            margin-bottom: 14px;
-            letter-spacing: 0.6px;
+        padding-left: 39px;
+        background-repeat: no-repeat;       
+        background-position: 0 22px; 
 
-        }  
+        &::before {
+        display: block;
+        content: "";
+        width: 18px;
+        height: 17px;
+        background-size: cover;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 47px;
+        }
+
+        &-title {
+            font-family: $main-font; 
+            @include font (20px, 700, 30px, $main-font-color);
+            letter-spacing: 0.6px;
+            margin-bottom: 14px;
+        }
     }
 
     &__description_text {
-        
+        font-family: $study-font;
+        @include font (21px, 400, 30px, $secondary-font-color);
+        letter-spacing: 0.6px;
+    }
+
+    &__description_list-item {
+        font-family: $study-font;
+        @include font (21px, 400, 30px, $secondary-font-color);
+        letter-spacing: 0.6px;
+    }
+
+    &__description_new-line {
+        display: block;
+        font-family: $study-font;
+        @include font (21px, 400, 30px, $secondary-font-color);
+        letter-spacing: 0.6px;
     }
 }
 
+.icon__star_red {
+    background-image: url('../images/study/star_red.png');
+}
 
+.icon__star_yellow {
+    background-image: url('../images/study/star_yellow.png');
+}
 
+.icon__star_blue {
+    background-image: url('../images/study/star_blue.png');
+}
+
+.section__background_sputnik {
+    background-image: url('../images/study/sputnik-2.svg');
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 3;
+    
+}
+
+@media (min-width: 768px) {
+    .study-list {
+        padding: 56px 30px 65px 30px;
+        background-image: url('../images/study/study-bg-md.png');
+    
+        &__item {
+            padding-left: 82px;
+        
+            &:not(:last-child) {
+                margin-bottom: 52px;
+            }
+    
+            &-title {
+                font-family: $main-font; 
+                @include font (25px, 700, 30px, $main-font-color);
+                letter-spacing: 0.6px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__description_new-line {
+            display: inline;
+            font-family: $study-font;
+            @include font (21px, 400, 30px, $secondary-font-color);
+            letter-spacing: 0.6px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .study-list {
+        padding: 154px 30px 112px 30px;
+        background-image: url('../images/study/study-bg-lg.png');
+    
+        &__item {
+            padding-left: 82px;
+        
+            &:not(:last-child) {
+                margin-bottom: 52px;
+            }
+    
+            &-title {
+                font-family: $main-font; 
+                @include font (30px, 700, 30px, $main-font-color);
+                letter-spacing: 0.6px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
