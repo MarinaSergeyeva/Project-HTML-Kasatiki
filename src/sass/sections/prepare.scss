@@ -67,12 +67,28 @@
       width: 340px;
     }
 
-    &_light {
+    &_bgss {
       background-color: rgb(245, 249, 254);
     }
 
-    &_dark {
+    &_bggd {
       background-color: rgb(232, 241, 250);
+    }
+
+    &_bgdd {
+      background-color: rgb(245, 249, 254);
+
+      @media (min-width: 768px) and (max-width: 1439px) {
+        background-color: rgb(232, 241, 250);
+      }
+    }
+
+    &_bggk {
+      background-color: rgb(232, 241, 250);
+
+      @media (min-width: 768px) and (max-width: 1439px) {
+        background-color: rgb(245, 249, 254);
+      }
     }
 
     &_wrapper {
