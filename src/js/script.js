@@ -13,9 +13,9 @@ $(document).ready(function () {
         settings: {
           variablesWidth: false,
           arrows: true,
-          centerMode: true,
+          centerMode: false,
           centerPadding: '25%',
-          slidesToShow: 1,
+          slidesToShow: 3,
         },
       },
       {
