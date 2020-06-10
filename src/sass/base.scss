@@ -40,8 +40,9 @@ a {
 }
 
 .container {
-  width: 320px;
+  min-width: 320px;
   padding: 0px 15px;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
     width: 768px;
@@ -50,6 +51,7 @@ a {
 
   @media (min-width: 1440px) {
     width: 1280px;
+    padding: 0px;
   }
 }
 

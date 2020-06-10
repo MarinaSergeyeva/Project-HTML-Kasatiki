@@ -132,14 +132,12 @@
 }
 
 .media {
-  display: flex;
-
   @media (max-width: 767px) {
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   @media (min-width: 768px) {
+    display: flex;
+
     margin-bottom: 48px;
     margin-left: 52px;
   }
@@ -158,6 +156,10 @@
   }
 
   &_footer-lg {
+    @media (max-width: 767px) {
+      display: block;
+    }
+
     @media (min-width: 768px) {
       margin: 0;
     }
@@ -197,12 +199,13 @@
 
 .socials {
   display: flex;
-  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   margin-bottom: 40px;
 
   @media (min-width: 768px) {
     margin: 0;
+    align-items: center;
   }
 
   @media (min-width: 1440px) {
