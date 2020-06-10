@@ -3,7 +3,7 @@
   background-image: url('../images/certif-images/mobile-bg.jpg');
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 100% 425px;
+  background-size: 100% 100%;
 
   @media (min-width: 768px) {
     background-image: url('../images/certif-images/tablet-bg.jpg');
@@ -21,7 +21,7 @@
 }
 
 .certificate__title-wrapper {
-  max-width: 80%;
+  max-width: 230px;
   margin: 0 auto 35px;
   text-align: center;
 
