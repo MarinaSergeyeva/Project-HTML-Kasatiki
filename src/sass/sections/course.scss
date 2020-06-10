@@ -1,177 +1,188 @@
 .section__course {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.container__course {
+  width: 1420px;
+  margin: 0 auto;
 }
 
 .section__title_course {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .course-list {
-    @extend %flex-between;
-    flex-direction: column;
-    margin-bottom: 44px;
+  @extend %flex-between;
+  flex-direction: column;
+  margin-bottom: 44px;
 
-    &__item {
-        &-title {
-            font-family: $main-font;
-            @include font (20px, 700, 25px, $main-font-color);
-            margin-bottom: 20px;
-            letter-spacing: 0.6px ;
-            }  
-
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
-
-        &_red {
-            color:$secondary-decoration-color;
-        }    
-
-        &_yellow {
-            color: $btn-color;
-        }
-
-        &_blue {
-            color: $third-decoration-color;
-        }
+  &__item {
+    @media (min-width: 767px) and (max-width: 1439px) {
+      margin: 0 auto;
+      width: calc(100% - 40px * 2);
     }
 
-    &__description {
-        font-family:$main-font;
-        @include font (14px, 400, 24px, $secondary-font-color);
-        text-align: left;
-
-        &_bold {
-            color: $main-font-color;
-            font-weight: 700;
-        }
-    } 
-
-    &__icon::before {
-        content: "";
-        display: block;
-        margin: 0 auto 35px;
-        height: 142px;
-        width: 140px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+    &-title {
+      font-family: $main-font;
+      @include font(20px, 700, 25px, $main-font-color);
+      margin-bottom: 20px;
+      letter-spacing: 0.6px;
     }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &_red {
+      color: $secondary-decoration-color;
+    }
+
+    &_yellow {
+      color: $btn-color;
+    }
+
+    &_blue {
+      color: $third-decoration-color;
+    }
+  }
+
+  &__description {
+    font-family: $main-font;
+    @include font(14px, 400, 24px, $secondary-font-color);
+    text-align: left;
+    letter-spacing: 0.48px;
+
+    &_bold {
+      color: $main-font-color;
+      font-weight: 700;
+    }
+  }
+
+  &__icon::before {
+    content: '';
+    display: block;
+    margin: 0 auto 35px;
+    height: 142px;
+    width: 140px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .icon__soft-skills::before {
-    background-image: url('../images/course/icon-soft-skills.svg');
+  background-image: url('../images/course/icon-soft-skills.svg');
 }
 
 .icon__hard-skills::before {
-    background-image: url('../images/course/icon-hard-skills.png');
+  background-image: url('../images/course/icon-hard-skills.png');
 }
 
 .icon__real-project::before {
-    background-image: url('../images/course/icon-real-project.svg');
+  background-image: url('../images/course/icon-real-project.svg');
 }
 
 .btn {
-    @extend %btn-base;
-    display: block;
-    border-radius: 32px;
+  @extend %btn-base;
+  display: block;
+  border-radius: 32px;
 
-    &_yellow-gradient {
-        @include font (13px, 700, 1.2, rgb(255, 255, 255));
-        @include btn ($btn-color, rgb(255, 255, 255), 24px 0 22px, 270px);
-        font-family: $main-font;
-        margin: 0 auto;
-        height: auto;
-        box-shadow: 0px 13px 17.1px 0.9px rgba(238, 193, 77, 0.4);
-        border: 1px solid $btn-color;
+  &_yellow-gradient {
+    @include font(13px, 700, 1.2, rgb(255, 255, 255));
+    @include btn($btn-color, rgb(255, 255, 255), 24px 0 22px, 270px);
+    font-family: $main-font;
+    margin: 0 auto;
+    height: auto;
+    box-shadow: 0px 13px 17.1px 0.9px rgba(238, 193, 77, 0.4);
+    border: 1px solid $btn-color;
 
-        &:hover,
-        &:focus {
-            background-color: rgb(255, 255, 255);
-            color: $btn-color;
-        }
+    &:hover,
+    &:focus {
+      background-color: rgb(255, 255, 255);
+      color: $btn-color;
     }
+  }
 }
 
-    // MEDIA - 768px
+// MEDIA - 768px
 
 @media (min-width: 768px) {
-    .section__course {
-        padding-bottom: 50px;
+  .section__course {
+    padding-bottom: 50px;
+  }
+
+  .section__title_course {
+    margin-bottom: 37px;
+  }
+
+  .course-list {
+    margin-bottom: 60px;
+    &__item {
+      &-title {
+        @include font(25px, 700, 25px, $main-font-color);
+        margin-bottom: 32px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
     }
 
-    .section__title_course {
-        margin-bottom: 37px;
+    &__description {
+      @include font(16px, 400, 30px, $secondary-font-color);
     }
 
-    .course-list {
-        margin-bottom: 60px;
-        &__item {
-            &-title {
-                @include font (25px, 700, 25px, $main-font-color);
-                margin-bottom: 32px;
-            }
-
-            &:not(:last-child) {
-                margin-bottom: 50px;
-            }  
-        }
-
-        &__description {
-            @include font (16px, 400, 30px, $secondary-font-color);
-        } 
-
-        &__icon::before {
-            margin: 0 auto 44px;
-            height: 203px;
-            width: 197px;
-        }
+    &__icon::before {
+      margin: 0 0 44px 0;
+      height: 203px;
+      width: 197px;
     }
+  }
 
-    .btn_yellow-gradient{
-        @include btn ($btn-color, rgb(255, 255, 255), 24px 0 22px, 400px);
-        @include font (19px, 700, 1.2, rgb(255, 255, 255));
-    }
+  .btn_yellow-gradient {
+    @include btn($btn-color, rgb(255, 255, 255), 24px 0 22px, 400px);
+    @include font(19px, 700, 1.2, rgb(255, 255, 255));
+  }
 
-    .icon__hard-skills::before {
-        background-image: url('../images/course/icon-hard-skills-md.png');
-    }
+  .icon__hard-skills::before {
+    background-image: url('../images/course/icon-hard-skills-md.png');
+  }
 }
 
-    // MEDIA - 1440px
+// MEDIA - 1440px
 
 @media (min-width: 1440px) {
-    .section__course {
-        padding-bottom: 40px;
+  .section__course {
+    padding-bottom: 40px;
+  }
+
+  .section__title_course {
+    margin-bottom: 66px;
+  }
+
+  .course-list {
+    flex-direction: row;
+    margin-bottom: 90px;
+
+    &__item {
+      width: calc((100% - 90px * 2) / 3);
+      &:not(:last-child) {
+        margin-right: 68px;
+      }
+
+      &-title {
+        @include font(30px, 700, 30px, $main-font-color);
+        margin-bottom: 32px;
+        letter-spacing: 0.6px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
     }
 
-    .section__title_course {
-        margin-bottom: 66px;
+    &__icon::before {
+      margin: 0 0 50px 0;
     }
-
-    .course-list {
-        flex-direction: row;
-        margin-bottom: 90px;
-        
-        &__item {
-            width: calc((100% - 80px * 2) / 3);
-            &:not(:last-child) {
-                margin-right: 68px;
-            }
-            
-            &-title {
-                @include font (30px, 700, 30px, $main-font-color);
-                margin-bottom: 32px;
-                letter-spacing: 0.6px;
-            }  
-    
-            &:not(:last-child) {
-                margin-bottom: 0;
-            }
-        }
-
-        &__icon::before {
-            margin: 0 auto 50px;
-        }
-    }
+  }
 }
