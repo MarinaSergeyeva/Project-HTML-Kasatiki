@@ -2,7 +2,7 @@
   background-image: url(../images/test/header-bg-mob.png);
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 100% auto;
+  background-size: 100% 450px;
   padding: 10px 16px;
 
   &__container {
@@ -147,6 +147,7 @@
 @media (min-width: 768px) {
   .test {
     background-image: url(../images/test/header-tablet.png);
+    background-size: 100% 880px;
 
     &__header {
       padding: 70px 80px 28px;
@@ -200,6 +201,7 @@
 @media (min-width: 1440px) {
   .test {
     background-image: url(../images/test/section-4-bg@1x.png);
+    background-size: 100% 880px;
 
     &__header {
       @include font (30px, 400, 40px, #ffffff);

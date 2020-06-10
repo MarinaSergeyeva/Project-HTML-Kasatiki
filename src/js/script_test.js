@@ -1,7 +1,10 @@
 $(document).ready(function () {
   var owl = $('.test-list');
   owl.owlCarousel({
-    items: 1
+    items: 1,
+    dots: false,
+    dotsContainer: false,
+    navContainer: false
   });
 
   $('.btn-next').click(function () {
