@@ -1,26 +1,164 @@
-.study-list {
-    @extend %flex-between;
-    flex-direction: column;
-    margin: 25px 0 0;
-    padding: 46px 0 65px;
+.section__background {
+    position: relative;
     background-image: url('../images/study/study-bg-sm.png');
-    background-size: cover;
+    background-size: contain;
+    background-position: bottom;
     background-repeat: no-repeat;
 
-    &__item {
-        &-title {
-            font-family: $main-font; // должен быть - font-family: "GothamPro";
-            @include font (20px, 700, 30px, $secondary-font-color);
-            margin-bottom: 14px;
-            letter-spacing: 0.6px;
-
-        }  
-    }
-
-    &__description_text {
-        
+    &::after {
+        display: block;
+        content: "";
+        background-image: url('../images/study/sputnik-2-sm.png');
+        position: absolute;
+        bottom: -30px;
+        right: 0px;
+        @include size (99px, 213px);
+        background-repeat: no-repeat;
     }
 }
 
+.study-list {
+    @extend %flex-between;
+    flex-direction: column;
+    margin-top: 72px;
+
+    &__item {
+        padding-left: 39px;
+        background-repeat: no-repeat;       
+        background-position: 0 5px; 
+
+        &::before {
+        display: block;
+        content: "";
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 27px;
+        }
+
+        &-title {
+            font-family: $main-font; 
+            @include font (20px, 700, 30px, $main-font-color);
+            letter-spacing: 0.6px;
+            margin-bottom: 14px;
+        }
+    }
+
+    &__description_text {
+        font-family: $study-font;
+        @include font (14px, 400, 24px, $secondary-font-color);
+        letter-spacing: 0.6px;
+    }
+
+    &__description_list-item {
+        font-family: $study-font;
+        @include font (14px, 400, 24px, $secondary-font-color);
+        letter-spacing: 0.6px;
+    }
+
+    &__description_new-line {
+        display: block;
+        font-family: $study-font;
+        @include font (14px, 400, 24px, $secondary-font-color);
+        letter-spacing: 0.6px;
+    }
+}
+
+.icon__star_red {
+    background-image: url('../images/study/star_red.png');
+}
+
+.icon__star_yellow {
+    background-image: url('../images/study/star_yellow.png');
+}
+
+.icon__star_blue {
+    background-image: url('../images/study/star_blue.png');
+}
 
 
+    // MEDIA - 768px
+
+@media (min-width: 768px) {
+    .section__background {
+        background-image: url('../images/study/study-bg-md.png');
+
+        &::after {
+            background-image: url('../images/study/sputnik-2-md.png');
+            bottom: 15px;
+            @include size (298px, 370px);
+        }
+    }
+
+    .study-list {
+        margin-top: 92px;
+        padding-left: 52px;
+
+        &__item {
+            padding-left: 40px;
+        
+            &:not(:last-child) {
+                margin-bottom: 34px;
+            }
+    
+            &-title {
+                font-family: $main-font; 
+                @include font (25px, 700, 30px, $main-font-color);
+                letter-spacing: 0.6px;
+                margin-bottom: 14px;
+            }
+        }
+
+        &__description_text {
+            @include font (16px, 400, 22px, $secondary-font-color);
+        }
+
+        &__description_list-item {
+            @include font (16px, 400, 22px, $secondary-font-color);
+        }
+
+        &__description_new-line {
+            display: inline;
+            font-family: $study-font;
+            @include font (16px, 400, 22px, $secondary-font-color);
+            letter-spacing: 0.6px;
+        }
+    }
+}
+
+    // MEDIA - 1440px
+
+@media (min-width: 1440px) {
+    .section__background {
+        background-image: url('../images/study/study-bg-lg.png');
+
+        &::after {
+            background-image: url('../images/study/sputnik-2-lg.png');
+            @include size (561px, 563px);
+            bottom: 50px;
+        }
+    }
+
+    .section__title_flex {
+        display: flex;
+        padding: 0 130px;
+    }
+
+    .study-list {    
+        margin-top: 72px;
+        padding-left: 130px;
+        &__item {
+            padding-left: 40px;
+        
+            &:not(:last-child) {
+                margin-bottom: 52px;
+            }
+    
+            &-title {
+                font-family: $main-font; 
+                @include font (30px, 700, 30px, $main-font-color);
+                letter-spacing: 0.6px;
+            }
+        }
+    }
+}
