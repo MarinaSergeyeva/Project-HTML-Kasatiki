@@ -1,18 +1,18 @@
 .hero-header {
-  background-image: url(../../images/header/header-bg.jpg);
+  background-image: url(../images/header/header-bg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 430px;
   background-position: top;
   padding-top: 114px;
 
   @media (min-width: 768px) {
-    background-image: url(../../images/header/header-bg-md.jpg);
+    background-image: url(../images/header/header-bg-md.jpg);
     background-size: 100% 650px;
     padding-top: 190px;
   }
 
   @media (min-width: 1440px) {
-    background-image: url(../../images/header/header-bg-lg.jpg);
+    background-image: url(../images/header/header-bg-lg.jpg);
     background-size: 100% 1024px;
     padding-top: 252px;
   }
