@@ -1,26 +1,30 @@
-.section__background {
+.section__study {
   position: relative;
   background-image: url('../images/study/study-bg-sm.png');
-  background-size: contain;
+  background-size: 100% 417px;
   background-position: bottom;
   background-repeat: no-repeat;
-
-  &::after {
+  padding: 30px 0 68px;
+}
+ 
+.container__study::after {
     display: block;
     content: '';
     background-image: url('../images/study/sputnik-2-sm.png');
     position: absolute;
     bottom: -30px;
-    right: 0px;
+    left: 69%;
     @include size(99px, 213px);
     background-repeat: no-repeat;
   }
+
+.section__title_position {
+    margin-bottom: 72px;
 }
 
 .study-list {
   @extend %flex-between;
   flex-direction: column;
-  margin-top: 72px;
 
   &__item {
     padding-left: 39px;
@@ -46,20 +50,20 @@
 
   &__description_text {
     font-family: $study-font;
-    @include font(14px, 400, 24px, $secondary-font-color);
+    @include font(14px, 500, 24px, $secondary-font-color);
     letter-spacing: 0.6px;
   }
 
   &__description_list-item {
     font-family: $study-font;
-    @include font(14px, 400, 24px, $secondary-font-color);
+    @include font(14px, 500, 24px, $secondary-font-color);
     letter-spacing: 0.6px;
   }
 
   &__description_new-line {
     display: block;
     font-family: $study-font;
-    @include font(14px, 400, 24px, $secondary-font-color);
+    @include font(14px, 500, 24px, $secondary-font-color);
     letter-spacing: 0.6px;
   }
 }
@@ -79,19 +83,26 @@
 // MEDIA - 768px
 
 @media (min-width: 768px) {
-  .section__background {
+  .section__study {
     background-image: url('../images/study/study-bg-md.png');
-
-    &::after {
-      background-image: url('../images/study/sputnik-2-md.png');
-      bottom: 15px;
-      @include size(298px, 370px);
+    background-size: 100% 421px;
+    overflow: hidden;
+    padding: 45px 0 54px;
     }
-  }
 
-  .study-list {
-    margin-top: 92px;
-    padding-left: 52px;
+  .container__study::after {
+    background-image: url('../images/study/sputnik-2-md.png');
+    bottom: 40px;
+    left: 64%;
+    @include size(298px, 370px);
+    }
+
+    .wrap {
+        padding-left: 52px;
+    }
+
+  .section__title_position {
+    margin-bottom: 92px;
 
     &__item {
       padding-left: 40px;
@@ -109,17 +120,17 @@
     }
 
     &__description_text {
-      @include font(16px, 400, 22px, $secondary-font-color);
+      @include font(16px, 500, 22px, $secondary-font-color);
     }
 
     &__description_list-item {
-      @include font(16px, 400, 22px, $secondary-font-color);
+      @include font(16px, 500, 22px, $secondary-font-color);
     }
 
     &__description_new-line {
       display: inline;
       font-family: $study-font;
-      @include font(16px, 400, 22px, $secondary-font-color);
+      @include font(16px, 500, 22px, $secondary-font-color);
       letter-spacing: 0.6px;
     }
   }
@@ -128,24 +139,27 @@
 // MEDIA - 1440px
 
 @media (min-width: 1440px) {
-  .section__background {
+  .section__study {
     background-image: url('../images/study/study-bg-lg.png');
+    background-size: 100% 710px;
+    padding: 202px 0 115px;
+  }
 
-    &::after {
+    .container__study::after {
       background-image: url('../images/study/sputnik-2-lg.png');
       @include size(561px, 563px);
       bottom: 50px;
     }
-  }
 
-  .section__title_flex {
+    .wrap {
+        padding-left: 130px;
+    }
+
+    .section__title_position {
     text-align: left;
-    padding: 0 130px;
-  }
+    }
 
   .study-list {
-    margin-top: 72px;
-    padding-left: 130px;
     &__item {
       padding-left: 40px;
 
