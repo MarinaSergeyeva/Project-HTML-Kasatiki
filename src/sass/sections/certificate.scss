@@ -8,13 +8,14 @@
   @media (min-width: 768px) {
     background-image: url('../images/certif-images/tablet-bg.jpg');
     background-position: right;
-    padding: 11% 0 38%;
+    padding: 11% 0 50%;
+    position: relative;
 
   }
 
   @media (min-width: 1440px) {
     background-image: url('../images/certif-images/desktop-bg.jpg');
-    padding: 15% 0 2%;
+    padding: 15% 0 10%;
 
   }
 }
@@ -71,20 +72,6 @@
   }
 }
 
-
-.certificate-overlay {
-
-  @media (min-width: 768px) {
-    position: relative;
-    padding-bottom: 7%;
-    margin: 0 auto;
-  }
-
-  @media (min-width: 1440px) {
-    padding-bottom: 10%;
-  }
-}
-
 .certificate-wrapper {
   position: relative;
   margin: 0 auto;
@@ -97,6 +84,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 530px;
+    max-width: 740px;
+    top: 50%;
 
 
     &::before {
@@ -115,9 +104,9 @@
   }
 
   @media (min-width: 1440px) {
-    right: -10%;
-    bottom: -70%;
-    width: 70%;
+    right: 0%;
+    top: 0%;
+    max-width: 880px;
     height: 770px;
 
     &::before {
@@ -138,7 +127,7 @@
 .certificate__picture {
   position: absolute;
   display: block;
-  transition: all 150ms linear;
+  transition: all 200ms linear;
 
   &-certif-1 {
     transform: translate(38%, 0);
