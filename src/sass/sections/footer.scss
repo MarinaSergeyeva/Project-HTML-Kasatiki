@@ -1,32 +1,47 @@
 .footer {
   background-image: url(../images/footer/footer-bg.jpg);
-  background-size: 100% 675px;
+  background-size: 100% 686px;
   background-repeat: no-repeat;
   background-position: bottom;
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 40px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1439px) {
     background-image: url(../images/footer/footer-bg-md.jpg);
-    background-size: 100% 420px;
+    background-size: 100% 434px;
+    padding-top: 78px;
+    padding-bottom: 30px;
+
+    &::before {
+      content: '';
+      background-image: url(../images/footer/rocket-md.png);
+      width: 129px;
+      height: 202px;
+      position: absolute;
+      // bottom: 90px;
+      // right: 38px;
+      bottom: 20.7%;
+      right: 4.95%;
+    }
   }
 
   @media (min-width: 1440px) {
     background-image: url(../images/footer/footer-bg-lg.jpg);
-    background-size: 100% 494px;
-  }
+    background-size: 100% 504px;
+    padding-top: 166px;
+    padding-bottom: 68px;
 
-  &__pic {
-    &_md {
-      @include size(118px, 188px);
-
-      @media (max-width: 767px) {
-        display: none;
-      }
-
-      @media (min-width: 768px) {
-        position: absolute;
-        bottom: 97px;
-        right: 55px;
-      }
+    &::before {
+      content: '';
+      background-image: url(../images/footer/rocket-lg.png);
+      width: 324px;
+      height: 515px;
+      position: absolute;
+      // bottom: 15px;
+      // right: 98px;
+      bottom: 2.92%;
+      right: 6.8%;
     }
   }
 }
@@ -51,7 +66,11 @@
 }
 
 .contacts-media__wrapper {
-  // display: flex;
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 76px;
+  }
 }
 
 .contacts {
@@ -71,6 +90,7 @@
   }
 
   @media (min-width: 1440px) {
+    margin-bottom: 0;
     margin-right: 122px;
   }
 
@@ -79,16 +99,29 @@
     text-align: center;
     color: $main-font-color;
 
-    @media (min-width: 768px) {
-      text-align: left;
-      margin-right: 70px;
+    &:hover,
+    &:focus {
+      color: $main-decoration-color;
     }
 
-    &-adress {
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+
+    @media (min-width: 1440px) {
+      margin: 0;
+    }
+
+    &_adress {
       margin-bottom: 30px;
 
       @media (min-width: 768px) {
         margin-bottom: 0;
+        margin-right: 68px;
+      }
+
+      @media (min-width: 1440px) {
+        margin-right: 118px;
       }
 
       &-br {
@@ -110,6 +143,10 @@
     margin-bottom: 48px;
     margin-left: 52px;
   }
+
+  @media (min-width: 1440px) {
+    margin-left: 0;
+  }
 }
 
 .btn {
@@ -126,6 +163,14 @@
     @include font(13px, 700, 1.2, #ffffff);
     background: $main-gradient;
     box-shadow: 5.5px 9.526px 16px 0px rgba(90, 118, 233, 0.23);
+    transition: all 0.4s linear;
+
+    &:hover,
+    &:focus {
+      background: $hover-main-gradient;
+      transform: rotateX(360deg);
+      transition: all 0.4s linear;
+    }
 
     @media (max-width: 767px) {
       margin: 0 auto;
@@ -138,11 +183,16 @@
       letter-spacing: 0.48px;
       margin-right: 40px;
     }
+
+    @media (min-width: 1440px) {
+      margin: 0;
+    }
   }
 }
 
 .socials {
   display: flex;
+  align-items: center;
   margin: 0 auto;
   margin-bottom: 40px;
 
@@ -164,9 +214,9 @@
     display: block;
   }
 
-  &__icon-telegram,
-  &__icon-facebook,
-  &__icon-youtube {
+  &__icon_telegram,
+  &__icon_facebook,
+  &__icon_youtube {
     @include size(42px, 42px);
   }
 
@@ -180,8 +230,11 @@
 }
 
 .terms-socials {
-  display: flex;
   align-items: center;
+
+  @media (min-width: 1440px) {
+    display: flex;
+  }
 }
 
 .terms {
@@ -212,5 +265,10 @@
     @include font(13px, 400, 25px, $secondary-font-color);
     opacity: 0.55;
     letter-spacing: 0.52px;
+
+    &:hover,
+    &:focus {
+      color: $third-decoration-color;
+    }
   }
 }
