@@ -1,25 +1,25 @@
 .section__study {
   position: relative;
   background-image: url('../images/study/study-bg-sm.png');
-  background-size: 100% 417px;
+  background-size: 100% 442px;
   background-position: bottom;
   background-repeat: no-repeat;
   padding: 30px 0 68px;
 }
- 
+
 .container__study::after {
-    display: block;
-    content: '';
-    background-image: url('../images/study/sputnik-2-sm.png');
-    position: absolute;
-    bottom: -30px;
-    left: 69%;
-    @include size(99px, 213px);
-    background-repeat: no-repeat;
-  }
+  display: block;
+  content: '';
+  background-image: url('../images/study/sputnik-2-sm.png');
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  @include size(99px, 213px);
+  background-repeat: no-repeat;
+}
 
 .section__title_position {
-    margin-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .study-list {
@@ -85,21 +85,20 @@
 @media (min-width: 768px) {
   .section__study {
     background-image: url('../images/study/study-bg-md.png');
-    background-size: 100% 421px;
+    background-size: 100% 440px;
     overflow: hidden;
     padding: 45px 0 54px;
-    }
+  }
 
   .container__study::after {
     background-image: url('../images/study/sputnik-2-md.png');
     bottom: 40px;
-    left: 64%;
     @include size(298px, 370px);
-    }
+  }
 
-    .wrap {
-        padding-left: 52px;
-    }
+  .wrap {
+    padding-left: 52px;
+  }
 
   .section__title_position {
     margin-bottom: 92px;
@@ -141,23 +140,24 @@
 @media (min-width: 1440px) {
   .section__study {
     background-image: url('../images/study/study-bg-lg.png');
-    background-size: 100% 710px;
+    background-size: 100% 756px;
     padding: 202px 0 115px;
   }
 
-    .container__study::after {
-      background-image: url('../images/study/sputnik-2-lg.png');
-      @include size(561px, 563px);
-      bottom: 50px;
-    }
+  .container__study::after {
+    background-image: url('../images/study/sputnik-2-lg.png');
+    @include size(561px, 563px);
+    bottom: 50px;
+    right: 14.85%;
+  }
 
-    .wrap {
-        padding-left: 130px;
-    }
+  .wrap {
+    padding-left: 130px;
+  }
 
-    .section__title_position {
+  .section__title_position {
     text-align: left;
-    }
+  }
 
   .study-list {
     &__item {
