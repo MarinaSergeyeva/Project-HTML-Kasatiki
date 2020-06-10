@@ -45,18 +45,18 @@
     &-wrapper {
       font-family: $main-font;
       text-align: center;
-      width: 260px;
+      max-width: 260px;
       justify-content: center;
       margin: 0 auto;
       margin-bottom: 26px;
 
       @media (min-width: 768px) {
-        width: 450px;
+        max-width: 450px;
         margin-bottom: 40px;
       }
 
       @media (min-width: 1440px) {
-        width: 1216px;
+        max-width: 1216px;
         margin-bottom: 10px;
       }
     }
