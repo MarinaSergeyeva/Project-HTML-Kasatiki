@@ -155,7 +155,12 @@
 
   @media (min-width: 768px) {
     position: relative;
-    margin: 0;
+  }
+
+  &_footer-lg {
+    @media (min-width: 768px) {
+      margin: 0;
+    }
   }
 
   &_gradient {
