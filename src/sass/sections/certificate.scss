@@ -11,7 +11,6 @@
     padding: 84px 0 380px;
     position: relative;
     background-size: 100% 700px;
-
   }
 
   @media (min-width: 1440px) {
@@ -26,7 +25,7 @@
   margin: 0 auto 35px;
   text-align: center;
 
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     max-width: 53%;
     text-align: left;
     margin: 0 0 1.4% 7%;
@@ -43,7 +42,7 @@
   letter-spacing: 0.9px;
   color: rgb(255, 255, 255);
 
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     text-align: left;
     @include font(20px, 700, 45px, rgb(255, 255, 255));
     letter-spacing: 1.2px;
@@ -62,7 +61,7 @@
   @include font(16px, 700, 22px, rgb(255, 255, 255));
   letter-spacing: 0.48px;
 
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     @include font(25px, 700, 35px, rgb(255, 255, 255));
     letter-spacing: 1px;
   }
@@ -78,7 +77,11 @@
   margin: 0 auto;
   width: 100%;
 
-  @media (min-width:768px) {
+  @media (max-width: 767px) {
+    max-width: 290px;
+  }
+
+  @media (min-width: 768px) {
     position: absolute;
     background-image: url('../images/certif-images/confetti.svg');
     background-position: center;
@@ -87,7 +90,6 @@
     height: 530px;
     max-width: 740px;
     top: 50%;
-
 
     &::before {
       content: '';
@@ -117,12 +119,10 @@
       height: 150px;
     }
   }
-
 }
 
 .certificate-img {
   box-shadow: 3px 2.5px 3px 0px rgba(0, 0, 0, 0.3);
-
 }
 
 .certificate__picture {
@@ -139,7 +139,7 @@
       transform: scale(1.1) translate(38%, 0);
     }
 
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
       width: 34%;
       transform: translate(91%, 18%);
 
@@ -149,7 +149,7 @@
       }
     }
 
-    @media (min-width:1440px) {
+    @media (min-width: 1440px) {
       width: 39%;
       transform: translate(72%, 29%);
 
@@ -170,7 +170,7 @@
       transform: scale(1.2) translate(8%, 6%);
     }
 
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
       width: 30%;
       transform: translate(63%, 27%);
 
@@ -180,7 +180,7 @@
       }
     }
 
-    @media (min-width:1440px) {
+    @media (min-width: 1440px) {
       width: 34%;
       transform: translate(45%, 42%);
 
@@ -201,7 +201,7 @@
       transform: scale(1.2) translate(85%, 6%);
     }
 
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
       width: 30.5%;
       transform: translate(155%, 26%);
 
@@ -211,7 +211,7 @@
       }
     }
 
-    @media (min-width:1440px) {
+    @media (min-width: 1440px) {
       width: 33%;
       transform: translate(140%, 41%);
 
