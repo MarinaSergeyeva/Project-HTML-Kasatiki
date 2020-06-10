@@ -2,21 +2,22 @@
   padding: 35px 0 230px;
   background-image: url('../images/certif-images/mobile-bg.jpg');
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover;
+  background-position: top;
+  background-size: 100% 425px;
 
   @media (min-width: 768px) {
     background-image: url('../images/certif-images/tablet-bg.jpg');
-    background-position: right;
+    background-position: top;
     padding: 84px 0 380px;
     position: relative;
+    background-size: 100% 700px;
 
   }
 
   @media (min-width: 1440px) {
     background-image: url('../images/certif-images/desktop-bg.jpg');
     padding: 202px 0 145px;
-
+    background-size: 100% 630px;
   }
 }
 
