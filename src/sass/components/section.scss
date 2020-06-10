@@ -13,11 +13,11 @@
 
     &::before {
       color: $main-decoration-color;
-      content: '\005B ';
+      content: '\005B\20';
     }
 
     &::after {
-      content: ' \005D';
+      content: '\20\005D';
       color: $main-decoration-color;
     }
   }
