@@ -170,14 +170,17 @@
     &-link {
       @include font(15px, 500, 1.2, #ffffff);
       letter-spacing: 0.75px;
+      transition: all 0.3s linear;
 
       @media (min-width: 1440px) {
         @include font(23px, 500, 1.2, #ffffff);
         letter-spacing: 1.15px;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: $btn-color;
+        transition: all 0.3s linear;
       }
 
       &::after {
@@ -186,12 +189,14 @@
           content: '';
           @include size(100%, 2px);
           background-color: transparent;
+          transition: all 0.3s linear;
         }
       }
 
       &:hover:after,
       &:focus:after {
         background-color: rgba(254, 194, 64, 0.3);
+        transition: all 0.3s linear;
       }
     }
   }

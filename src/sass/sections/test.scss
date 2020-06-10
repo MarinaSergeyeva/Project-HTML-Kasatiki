@@ -11,7 +11,7 @@
   }
 
   &__header {
-    @include font (16px, 400, 22px, #ffffff);
+    @include font(16px, 400, 22px, #ffffff);
     text-align: center;
     letter-spacing: 0.48px;
     padding: 24px 16px;
@@ -35,19 +35,19 @@
   }
 
   &__about {
-    @include font (14px, 400, 24px, #6b6f7a);
+    @include font(14px, 400, 24px, #6b6f7a);
     text-align: left;
     letter-spacing: 0.48px;
     margin-bottom: 20px;
   }
 
   &__title {
-    @include font (14px, 600, 21px, $main-decoration-color);
+    @include font(14px, 600, 21px, $main-decoration-color);
     margin-bottom: 18px;
   }
 
   &__question {
-    @include font (17px, 600, 27px, $main-font-color);
+    @include font(17px, 600, 27px, $main-font-color);
     margin-bottom: 26px;
   }
 }
@@ -56,7 +56,7 @@
   padding-right: 24px;
 
   &_label {
-    @include font (14px, 400, 1.2, $main-decoration-color);
+    @include font(14px, 400, 1.2, $main-decoration-color);
   }
 }
 
@@ -64,7 +64,7 @@
   display: none;
 
   &_item {
-    @include font (14px, 400, 24px, #6b6f7a);
+    @include font(14px, 400, 24px, #6b6f7a);
     margin-top: 12px;
     margin-bottom: 42px;
   }
@@ -99,7 +99,7 @@
   margin-left: 1px;
 }
 
-.test-answer:checked+.test-list_label::before {
+.test-answer:checked + .test-list_label::before {
   background-color: $main-decoration-color;
   background-clip: content-box;
 }
@@ -121,18 +121,15 @@
   cursor: pointer;
 }
 
-
 .btn-prev:hover,
 .btn-next:hover,
 .btn-prev:focus,
 .btn-next:focus {
-
   color: $main-decoration-color;
 }
 
 .numeral {
-  @include font (14px, 700, 1.2, $main-font-color);
-
+  @include font(14px, 700, 1.2, $main-font-color);
 }
 
 .question-number {
@@ -151,23 +148,21 @@
 
     &__header {
       padding: 70px 80px 28px;
-      @include font (20px, 400, 25px, #ffffff);
+      @include font(20px, 400, 25px, #ffffff);
 
       &::before {
         background-image: url(../images/test/icon-sputnik-tablet1.png);
         margin-bottom: 20px;
-
       }
     }
 
     &__about {
-      @include font (16px, 400, 30px, #6b6f7a);
+      @include font(16px, 400, 30px, #6b6f7a);
       letter-spacing: 0.48px;
     }
 
     &__wrapper {
       padding: 34px 40px;
-
     }
 
     &__container {
@@ -178,15 +173,15 @@
   .test__title {
     display: inline-block;
     margin-right: 54px;
-    @include font (14px, 700, 21px, $main-font-color);
+    @include font(14px, 700, 21px, $main-font-color);
   }
 
   .test-list_label {
-    @include font (15px, 400, 1.2, $main-decoration-color);
+    @include font(15px, 400, 1.2, $main-decoration-color);
   }
 
   .test-answer_item {
-    @include font (15px, 400, 24px, #6b6f7a);
+    @include font(15px, 400, 24px, #6b6f7a);
   }
 
   .nav-wrapper {
@@ -204,7 +199,7 @@
     background-size: 100% 880px;
 
     &__header {
-      @include font (30px, 400, 40px, #ffffff);
+      @include font(30px, 400, 40px, #ffffff);
       letter-spacing: 1px;
       padding: 110px 290px 58px;
       min-width: 810px;
@@ -270,7 +265,7 @@
     }
   }
 
-  .answer-wrapper_cell:not(:nth-last-child(-n+2)) {
+  .answer-wrapper_cell:not(:nth-last-child(-n + 2)) {
     margin-bottom: 86px;
   }
 
@@ -296,7 +291,7 @@
 
   .btn-prev_span-desktop,
   .btn-next_span-desktop {
-    @include font (11px, 700, 60px, #6b6f7a);
+    @include font(11px, 700, 60px, #6b6f7a);
     letter-spacing: 0.55px;
     text-transform: uppercase;
     padding-left: 10px;
