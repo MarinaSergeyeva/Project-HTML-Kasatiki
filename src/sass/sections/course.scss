@@ -3,8 +3,10 @@
 }
 
 .container__course {
-  width: 1420px;
-  margin: 0 auto;
+  @media (min-width: 1440px) {
+    width: 1420px;
+    margin: 0 auto;
+  }
 }
 
 .section__title_course {
