@@ -48,36 +48,38 @@
 
 .test-list {
   padding-right: 24px;
-}
 
-.test-list_label {
-  @include font (14px, 400, 1.2, $main-decoration-color);
+  &_label {
+    @include font (14px, 400, 1.2, $main-decoration-color);
+  }
 }
 
 .test-answer {
   display: none;
 
-
   &_item {
     @include font (14px, 400, 24px, #6b6f7a);
+    margin-top: 12px;
+    margin-bottom: 42px;
   }
 }
 
-.nav-wrapper_tablet,
-.nav-wrapper_desktop {
+.nav-wrapper_tablet {
   display: none;
 }
 
+.btn-prev_desktop,
+.btn-next_desktop {
+  display: none;
+}
 
-.test-answer_item {
-  margin-top: 12px;
-  margin-bottom: 42px;
+.nav-wrapper_desktop-span {
+  display: none;
 }
 
 .test-answer_item:last-child {
   margin-bottom: 24px;
 }
-
 
 .test-list_label::before {
   content: '';
@@ -112,6 +114,15 @@
   cursor: pointer;
 }
 
+
+.btn-prev:hover,
+.btn-next:hover,
+.btn-prev:focus,
+.btn-next:focus {
+
+  color: $main-decoration-color;
+}
+
 .numeral {
   @include font (14px, 700, 1.2, $main-font-color);
 
@@ -129,21 +140,14 @@
 @media (min-width: 768px) {
   .test {
     background-image: url(../images/test/header-tablet.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    padding: 10px 42px;
+
 
     &__header {
       padding: 70px 80px 28px;
       @include font (20px, 400, 25px, #ffffff);
 
       &::before {
-        content: '';
-        display: block;
-        height: 80px;
         background-image: url(../images/test/icon-sputnik-tablet.svg);
-        background-repeat: no-repeat;
-        background-position: center;
         margin-bottom: 20px;
 
       }
@@ -170,6 +174,13 @@
     @include font (14px, 700, 21px, $main-font-color);
   }
 
+  .test-list_label {
+    @include font (15px, 400, 1.2, $main-decoration-color);
+  }
+
+  .test-answer_item {
+    @include font (15px, 400, 24px, #6b6f7a);
+  }
 
   .nav-wrapper {
     display: none;
@@ -183,57 +194,109 @@
 @media (min-width: 1440px) {
   .test {
     background-image: url(../images/test/section-4-bg@1x.png);
-    padding: 10px 16px;
 
     &__header {
       @include font (30px, 400, 40px, #ffffff);
-      padding: 24px 16px;
+      letter-spacing: 1px;
+      padding: 110px 290px 58px;
+      min-width: 810px;
 
       &::before {
-        content: '';
-        display: block;
-        height: 80px;
         background-image: url(../images/test/icon-sputnik-desk.svg);
+        margin-bottom: 40px;
       }
+    }
+
+    &__question {
+      padding-right: 20px;
     }
 
     &__container {
       width: 1420px;
     }
 
-    .test-list__item {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .test__wrapper {
+    &__wrapper {
       display: flex;
       width: 100%;
-    }
-
-    .title-description__wrapper {
-      flex-basis: 30%;
-      flex-shrink: 0;
-    }
-
-    .test-list {
-      max-width: 70%;
-    }
-
-    .answer-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-
-      &_cell {
-        width: 50%;
-      }
-    }
-
-    .test-list_label::before {
-      display: block;
-
+      padding: 118px 126px;
     }
   }
 
+  .section__title_indent {
+    text-align: left;
+  }
 
+  .title-description__wrapper {
+    flex-basis: 22%;
+    flex-shrink: 0;
+    margin-right: 48px;
+  }
+
+  .test-list {
+    display: flex;
+    max-width: 78%;
+
+    &_label::before {
+      content: '';
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-left: 90px;
+    }
+  }
+
+  .answer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 58%;
+    margin-left: 30px;
+    justify-content: space-between;
+
+    &_cell {
+      width: 50%;
+    }
+  }
+
+  .answer-wrapper_cell:not(:nth-last-child(-n+2)) {
+    margin-bottom: 86px;
+  }
+
+  .test-answer_item {
+    width: 50%;
+  }
+
+  .question-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 42%;
+    justify-content: space-between;
+    margin-right: 64px;
+  }
+
+  .nav-wrapper_tablet {
+    display: none;
+  }
+
+  .nav-wrapper_desktop-span {
+    display: inline-block;
+  }
+
+  .btn-prev_span-desktop,
+  .btn-next_span-desktop {
+    @include font (11px, 700, 60px, #6b6f7a);
+    letter-spacing: 0.55px;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btn-prev_desktop,
+  .btn-next_desktop {
+    display: block;
+  }
 }
