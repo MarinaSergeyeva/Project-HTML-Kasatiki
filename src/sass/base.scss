@@ -40,11 +40,12 @@ a {
 }
 
 .container {
-  width: 290px;
-  margin: 0 auto;
+  width: 320px;
+  padding: 0px 15px;
 
   @media (min-width: 768px) {
-    width: 710px;
+    width: 768px;
+    padding: 0px 30px;
   }
 
   @media (min-width: 1440px) {
