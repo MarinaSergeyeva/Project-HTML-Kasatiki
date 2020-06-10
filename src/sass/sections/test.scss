@@ -2,7 +2,13 @@
   background-image: url(../images/test/header-bg-mob.png);
   background-repeat: no-repeat;
   background-position: top;
+  background-size: 100% auto;
   padding: 10px 16px;
+
+  &__container {
+    width: 290px;
+    margin: 0 auto;
+  }
 
   &__header {
     @include font (16px, 400, 22px, #ffffff);
@@ -141,7 +147,6 @@
   .test {
     background-image: url(../images/test/header-tablet.png);
 
-
     &__header {
       padding: 70px 80px 28px;
       @include font (20px, 400, 25px, #ffffff);
@@ -159,7 +164,7 @@
     }
 
     &__wrapper {
-      padding: 34px 80px 16px 40px;
+      padding: 34px 40px;
 
     }
 
@@ -208,7 +213,7 @@
     }
 
     &__question {
-      padding-right: 20px;
+      padding-right: 18px;
     }
 
     &__container {
