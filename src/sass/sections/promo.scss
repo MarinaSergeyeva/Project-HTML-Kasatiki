@@ -1,12 +1,12 @@
 .promo {
-  padding: 20px 0 0 0;
+  padding: 20px 0 18px 0;
 
   @media (min-width: 768px) {
-    padding: 75px 0 0 0;
+    padding: 75px 0 50px 0;
   }
 
   @media (min-width: 1440px) {
-    padding: 70px 0 0 0;
+    padding: 70px 0 16px 0;
   }
 
   &__description {
@@ -131,9 +131,9 @@
   &__image {
     border-style: solid;
     border-width: 5px;
-    border-color: rgba(240, 240, 240, .5);
+    border-color: rgba(240, 240, 240, 0.5);
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 7.5px 12.99px 25px 0px rgba(96, 96, 97, 0.21);
 
     @media (min-width: 768px) {
