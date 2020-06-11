@@ -21,7 +21,6 @@
 }
 
 .container_slider {
-
   @media (max-width: 599px) {
     width: 320px;
     margin: 0 auto;
@@ -43,7 +42,7 @@
   &__name {
     position: absolute;
     background-color: #4f7df0;
-    @include font (16px, 700, 1.2, #ffffff);
+    @include font(16px, 700, 1.2, #ffffff);
     font-family: $main-font, sans-serif;
     padding: 8px 16px 6px;
     box-shadow: 7.5px 12.99px 24px 0px rgba(90, 118, 233, 0.12);
@@ -66,19 +65,23 @@
 
 .experiance {
   font-family: $main-font, sans-serif;
-  @include font (14px, 300, 30px, #6b6f7a);
+  @include font(14px, 300, 30px, #6b6f7a);
   letter-spacing: 0.48px;
   margin-bottom: 10px;
 
   &__item::before {
-    content: "\2013  ";
+    content: '\2013  ';
   }
 }
 
 .mission {
   font-family: $main-font, sans-serif;
-  @include font (14px, 700, 30px, #2c2c2c);
+  @include font(14px, 700, 30px, #2c2c2c);
   white-space: pre-line;
+}
+
+.teachers-list__item {
+  outline: none;
 }
 
 .teachers-list__item img {
@@ -115,7 +118,6 @@
   color: #ebebeb;
 }
 
-
 .slick-next {
   right: 7px;
 }
@@ -136,14 +138,11 @@
   }
 }
 
-
 @media (min-width: 768px) {
   .teachers-list__item {
     margin: 0 26px 36px;
   }
-
 }
-
 
 @media (min-width: 1000px) {
   .slick-next {
@@ -156,7 +155,6 @@
     top: 35%;
   }
 }
-
 
 @media (min-width: 1439px) {
   .teachers-list__item {
