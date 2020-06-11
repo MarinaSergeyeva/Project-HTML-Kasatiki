@@ -1,16 +1,12 @@
 .prepare {
 
-  &__container {
-    width: 240px;
-    margin: 0 auto;
-  }
-
   &__header {
     width: 205px;
+    /*width: 64.06%;*/
     margin: 0 auto 24px;
 
     @media (min-width: 768px) {
-      width: 680px;
+      width: 92.95%;
       margin: 0 auto 38px;
     }
 
@@ -51,12 +47,23 @@
     }
   }
 
+  &__container {
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      width: 710px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 1420px;
+    }
+  }
+
   &__list {
 
     @media (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
-      align-content: center;
       justify-content: center;
     }
   }
@@ -64,7 +71,11 @@
   &__item {
 
     @media (min-width: 768px) {
-      width: 340px;
+      width: 48%;
+    }
+
+    @media (min-width: 1440px) {
+      width: 25%;
     }
 
     &_bgss {
@@ -93,17 +104,18 @@
 
     &_wrapper {
       width: 236px;
+      /*width: 73.75%;*/
       margin: 0 auto;
       padding: 40px 0;
 
 
       @media (min-width: 768px) {
-        width: 270px;
+        width: 79%;
         padding: 46px 0;
       }
 
-      @media (min-width: 1450px) {
-        width: 300px;
+      @media (min-width: 1440px) {
+        width: 84.5%;
         padding: 60px 0;
       }
     }
@@ -121,7 +133,7 @@
       margin-bottom: 36px;
     }
 
-    @media (min-width: 1450px) {
+    @media (min-width: 1440px) {
       @include font(30px, 700, 36px, $main-font-color);
       margin-bottom: 26px
     }
@@ -145,7 +157,7 @@
       @include font(30px, 700, 36px, $main-decoration-color);
     }
 
-    @media (min-width: 1450px) {
+    @media (min-width: 1440px) {
       @include font(40px, 700, 48px, $main-decoration-color);
       margin: 0 0 20px 0;
     }
@@ -162,7 +174,7 @@
         left: 87px;
       }
 
-      @media (min-width: 1450px) {
+      @media (min-width: 1440px) {
         left: 115px;
       }
 
