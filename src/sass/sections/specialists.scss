@@ -31,8 +31,7 @@
   }
 
   &__list {
-
-    @media (min-width: 1450px) {
+    @media (min-width: 1440px) {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -105,13 +104,80 @@
     }
 
     @media (min-width: 768px) {
+      position: relative;
       @include font(30px, 400, 36px, $main-decoration-color);
       text-align: left;
       transform: translateX(25px);
+
+      &_dauni::before {
+        background-image: url(../images/specialists/dauni-arrow-md.png);
+      }
+
+      &_zuckerberg::before {
+        background-image: url(../images/specialists/zuckerberg-arrow-md.png);
+      }
+
+      &_mask::before {
+        background-image: url(../images/specialists/mask-arrow-md.png);
+      }
+
+      &_jobs::before {
+        background-image: url(../images/specialists/jobs-arrow-md.png);
+      }
+
+      &:before {
+        position: absolute;
+        top: -5px;
+        left: -70px;
+        content: '';
+        display: inline-block;
+        width: 53px;
+        height: 31px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
     }
 
-    @media (min-width: 1450px) {
+    @media (min-width: 1440px) {
       @include font(35px, 400, 42px, $main-decoration-color);
+
+      &_dauni::before {
+        width: 61px;
+        height: 35px;
+        top: -5px;
+        left: -85px;
+        background-image: url(../images/specialists/dauni-arrow-lg.png);
+      }
+
+      &_zuckerberg::before {
+        width: 65px;
+        height: 43px;
+        top: -14px;
+        left: -85px;
+        background-image: url(../images/specialists/zuckerberg-arrow-lg.png);
+      }
+
+      &_mask::before {
+        width: 75px;
+        height: 31px;
+        top: -6px;
+        left: -85px;
+        background-image: url(../images/specialists/mask-arrow-lg.png);
+      }
+
+      &_jobs::before {
+        width: 65px;
+        height: 43px;
+        top: -14px;
+        left: -85px;
+        background-image: url(../images/specialists/jobs-arrow-lg.png);
+      }
+
+      &:before {
+        // top: -5px;
+        // left: -70px;
+      }
     }
 
     &_wrapper {
