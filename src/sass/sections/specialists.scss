@@ -32,6 +32,11 @@
 
   &__list {
 
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     @media (min-width: 1450px) {
       display: flex;
       justify-content: space-between;
@@ -70,6 +75,30 @@
     &:last-of-type {
       @media (max-width: 1439px) {
         margin-bottom: 0px;
+      }
+    }
+
+    &_rob-order {
+      @media (min-width: 768px) {
+        order: 1;
+      }
+    }
+
+    &_mark-order {
+      @media (min-width: 768px) {
+        order: 2;
+      }
+    }
+
+    &_ilon-order {
+      @media (min-width: 768px) {
+        order: 3;
+      }
+    }
+
+    &_stiv-order {
+      @media (min-width: 768px) {
+        order: 4;
       }
     }
 
@@ -114,11 +143,100 @@
       @include font(35px, 400, 42px, $main-decoration-color);
     }
 
+    &_bg-rob::before {
+
+      @media (min-width: 768px) {
+        content: "";
+        background-image: url(../images/specialists/arrows/to-rob.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 53px;
+        height: 31px;
+        position: absolute;
+        bottom: 30%;
+        left: -23%;
+      }
+
+      @media (min-width: 1440px) {
+        width: 61px;
+        height: 35px;
+        left: -27%;
+      }
+    }
+
+    &_bg-ilon::before {
+
+      @media (min-width: 768px) {
+        content: "";
+        background-image: url(../images/specialists/arrows/to-ilon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 61px;
+        height: 25px;
+        position: absolute;
+        bottom: 35%;
+        left: -25%;
+      }
+
+      @media (min-width: 1440px) {
+        width: 75px;
+        height: 31px;
+        left: -27%;
+      }
+    }
+
+    &_bg-mark::before {
+
+      @media (min-width: 768px) {
+        content: "";
+        background-image: url(../images/specialists/arrows/to-mark-stiv.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 55px;
+        height: 36px;
+        position: absolute;
+        bottom: 35%;
+        left: -23%;
+      }
+
+      @media (min-width: 1440px) {
+        width: 65px;
+        height: 43px;
+        left: -27%;
+      }
+    }
+
+    &_bg-stiv::before {
+
+      @media (min-width: 768px) {
+        content: "";
+        background-image: url(../images/specialists/arrows/to-mark-stiv.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 55px;
+        height: 36px;
+        position: absolute;
+        bottom: 30%;
+        left: -23%;
+      }
+
+      @media (min-width: 1440px) {
+        width: 65px;
+        height: 43px;
+        left: -27%;
+      }
+    }
+
     &_wrapper {
       @media (min-width: 768px) {
         width: 305px;
         display: flex;
         flex-direction: column-reverse;
+        position: relative;
       }
 
       @media (min-width: 1450px) {
