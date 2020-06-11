@@ -1,19 +1,18 @@
 .prepare {
-
   &__header {
-    width: 205px;
-    /*width: 64.06%;*/
+    // max-width: 205px;
+    max-width: 64.06%;
     margin: 0 auto 24px;
 
     @media (min-width: 768px) {
-      width: 92.95%;
+      max-width: 92.95%;
       margin: 0 auto 38px;
     }
 
     &::before {
-      content: "";
+      content: '';
       display: block;
-      background-image: url(../images/specialists/specialists-sm/code-sm.jpg);
+      background-image: url(../images/specialists/specialists-md/code-md.png);
       width: 39px;
       height: 39px;
       margin: 0 auto 30px;
@@ -21,7 +20,7 @@
       background-size: cover;
 
       @media (min-width: 768px) {
-        background-image: url(../images/specialists/specialists-sm/code-sm.jpg);
+        // background-image: url(../images/specialists/specialists-sm/code-sm.jpg);
         width: 50px;
         height: 50px;
         margin: 0 auto 34px;
@@ -60,7 +59,6 @@
   }
 
   &__list {
-
     @media (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
@@ -69,7 +67,6 @@
   }
 
   &__item {
-
     @media (min-width: 768px) {
       width: 48%;
     }
@@ -108,7 +105,6 @@
       margin: 0 auto;
       padding: 40px 0;
 
-
       @media (min-width: 768px) {
         width: 79%;
         padding: 46px 0;
@@ -135,11 +131,11 @@
 
     @media (min-width: 1440px) {
       @include font(30px, 700, 36px, $main-font-color);
-      margin-bottom: 26px
+      margin-bottom: 26px;
     }
 
     &::before {
-      content: "";
+      content: '';
       background-image: url(../images/specialists/specialists-sm/star.png);
       width: 18px;
       height: 17px;
@@ -179,7 +175,7 @@
       }
 
       &::after {
-        content: "";
+        content: '';
         width: 33px;
         height: 1px;
         background-color: rgb(238, 191, 62);
