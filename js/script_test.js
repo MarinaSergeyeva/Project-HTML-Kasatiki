@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){var t=$(".test-list");t.owlCarousel({items:1,dots:!1,dotsContainer:!1,navContainer:!1}),$(".btn-next").click(function(){t.trigger("next.owl.carousel")}),$(".btn-prev").click(function(){t.trigger("prev.owl.carousel",[300])})});
